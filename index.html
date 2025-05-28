@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster - Beautiful Quiz Experience</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Animated background -->
+    <div class="bg-animation">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="container">
+        <div class="quiz-card">
+            <!-- Start Screen -->
+            <div class="start-screen" id="start-screen">
+                <div class="quiz-header">
+                    <h1 class="quiz-title">QuizMaster</h1>
+                    <p class="quiz-subtitle">Test Your Knowledge with Style</p>
+                </div>
+                
+                <div class="start-content">
+                    <div class="welcome-section">
+                        <div class="welcome-icon">🧠</div>
+                        <h2 class="welcome-title">Ready to Challenge Yourself?</h2>
+                        <p class="welcome-description">
+                            Choose your difficulty level and test your knowledge across various topics. 
+                            Each mode offers a unique challenge!
+                        </p>
+                    </div>
+
+                    <div class="difficulty-selection">
+                        <h3 class="difficulty-title">Select Difficulty</h3>
+                        <div class="difficulty-options">
+                            <div class="difficulty-card" data-difficulty="easy">
+                                <div class="difficulty-icon">🟢</div>
+                                <h4 class="difficulty-name">Easy</h4>
+                                <p class="difficulty-description">Perfect for beginners</p>
+                                <div class="difficulty-stats">
+                                    <span>5 Questions</span>
+                                    <span>3 Minutes</span>
+                                </div>
+                            </div>
+                            
+                            <div class="difficulty-card selected" data-difficulty="medium">
+                                <div class="difficulty-icon">🟡</div>
+                                <h4 class="difficulty-name">Medium</h4>
+                                <p class="difficulty-description">Balanced challenge</p>
+                                <div class="difficulty-stats">
+                                    <span>10 Questions</span>
+                                    <span>5 Minutes</span>
+                                </div>
+                            </div>
+                            
+                            <div class="difficulty-card" data-difficulty="hard">
+                                <div class="difficulty-icon">🔴</div>
+                                <h4 class="difficulty-name">Hard</h4>
+                                <p class="difficulty-description">Perfect for quiz masters</p>
+                                <div class="difficulty-stats">
+                                    <span>15 Questions</span>
+                                    <span>7 Minutes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="start-footer">
+                    <button class="btn btn-primary btn-large" id="start-game-btn">
+                        <span>Start Quiz</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8,5.14V19.14L19,12.14L8,5.14Z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quiz Game Screen (Hidden by default) -->
+            <div class="quiz-game" id="quiz-game" style="display: none;">
+                <!-- Header -->
+                <div class="quiz-header">
+                    <h1 class="quiz-title">QuizMaster</h1>
+                    <p class="quiz-subtitle">Test Your Knowledge with Style</p>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-progress="40"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span class="current-question">Question 2 of 5</span>
+                        <span class="progress-percentage">40% Complete</span>
+                    </div>
+                </div>
+
+                <!-- Quiz Content -->
+                <div class="quiz-content">
+                    <div class="question">
+                        <div class="question-number">Question 2</div>
+                        <h2 class="question-text">Which planet is known as the "Red Planet"?</h2>
+                    </div>
+
+                    <div class="options">
+                        <div class="option" data-option="A">
+                            <div class="option-letter">A</div>
+                            <span>Venus</span>
+                        </div>
+                        <div class="option selected" data-option="B">
+                            <div class="option-letter">B</div>
+                            <span>Mars</span>
+                        </div>
+                        <div class="option" data-option="C">
+                            <div class="option-letter">C</div>
+                            <span>Jupiter</span>
+                        </div>
+                        <div class="option" data-option="D">
+                            <div class="option-letter">D</div>
+                            <span>Saturn</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="quiz-footer">
+                    <div class="timer">
+                        <svg class="timer-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"/>
+                        </svg>
+                        <span class="timer-display">1:24</span>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-secondary" id="prev-btn">Previous</button>
+                        <button class="btn btn-primary" id="next-btn">Next Question</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Template (Hidden by default) -->
+    <div class="results-template hidden">
+        <div class="results-container">
+            <div class="results-icon">🎉</div>
+            <h2 class="results-title">Quiz Completed!</h2>
+            <p class="results-description">
+                You scored 4 out of 5 questions correctly
+            </p>
+            <div class="score-display">
+                Final Score: 80%
+            </div>
+        </div>
+    </div>
+
+    <!-- Alternative Results Footer Template -->
+    <div class="results-footer-template hidden">
+        <button class="btn btn-secondary" id="restart-btn">Try Again</button>
+        <button class="btn btn-primary" id="share-btn">Share Results</button>
+    </div>`
+
+
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
