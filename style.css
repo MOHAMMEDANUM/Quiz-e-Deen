@@ -243,6 +243,34 @@ p{
 
 }
 
+.progress-header{
+    display: flex;
+    justify-content: space-between;
+    margin:10px;
+}
+.progress-fill{
+    margin: auto;
+    width: 100%;
+    height: 20px;
+    background-color: limegreen;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+
+.question-number{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+    
+}
 
 
 
