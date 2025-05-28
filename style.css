@@ -97,7 +97,7 @@ p{
     justify-items: center;
 }
 
-.difficulty-card{
+.difficulty-easy-card{
     background-color: #f9f9f9;
     border: 2px solid deepskyblue;
     border-radius: 10px;
@@ -106,7 +106,36 @@ p{
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.difficulty-card:hover{
+.difficulty-easy-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+.difficulty-medium-card{
+    background-color: #f9f9f9;
+    border: 2px solid deepskyblue;
+    border-radius: 10px;
+    font-size: large;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.difficulty-medium-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.difficulty-hard-card{
+    background-color: #f9f9f9;
+    border: 2px solid deepskyblue;
+    border-radius: 10px;
+    font-size: large;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.difficulty-hard-card:hover{
     transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
