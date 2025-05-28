@@ -3,7 +3,7 @@
 
 // quiz start btn  declaration
 
-let quizStartBtn = document.getElementsByClassName("startbtn");
+let quizStartBtn = document.getElementById("start-game-btn");
 
 
 //  quiz section difficulty levels cards
@@ -12,9 +12,9 @@ let easyMode = document.getElementsByClassName("difficulty-easy-card");
 let mediumMode = document.getElementsByClassName("difficulty-medium-card");
 let hardMode = document.getElementsByClassName("difficulty-hard-card");
 
-let easyCount =0;
-let mediumCount =0;
-let hardCount =0;
+let easyCount = 0;
+let mediumCount = 0;
+let hardCount = 0;
 
 
 
@@ -40,9 +40,12 @@ let quizstart = ()  => {
         hardModeStart();
         window.location.href = "HardMode.html";
     }
+    else {
+        alert("Please select a difficulty level to start the quiz.");
+    }
         
 }
-quizStartBtn[0].addEventListener("click",quizstart)
+quizStartBtn.addEventListener("click",quizstart)
 
 //  easy mode function
 
