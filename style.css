@@ -67,6 +67,10 @@ p{
     color: #ff6347;
 
 }
+.difficulty-selection{
+    display: inline;
+}
+
 .difficulty-title{
     text-align: center;
     margin-bottom: 20px;

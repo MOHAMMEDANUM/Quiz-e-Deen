@@ -23,6 +23,13 @@ let hardCount =0;
 // quiz start function
 
 let quizstart = ()  => {
+    //  if easy mode is selected
+    if(easyCount > 0){
+        easyModeStart();
+        window.location.href = "F:/WEB PROJECTS/Islamic Quiz/EasyMode.html";
+        
+        
+    }
         
 }
 quizStartBtn[0].addEventListener("click",quizstart)
@@ -32,18 +39,19 @@ quizStartBtn[0].addEventListener("click",quizstart)
 let easyModeStart = () => {
 
     easyMode[0].style="background-color: deepskyblue; color: white; border: 2px solid rgba(40, 167, 69, 0.1);";
-
-
+    easyCount++;
 }
 
 //  medium mode function
 
 let mediumModeStart = () => {
     mediumMode[0].style="background-color: deepskyblue; color: white; border: 2px solid rgba(40, 167, 69, 0.1);";
+    mediumCount++;
 }
 
 // hard mode function
 
 let hardModeStart = () => {
     hardMode[0].style="background-color: deepskyblue; color: white; border: 2px solid rgba(40, 167, 69, 0.1);";
+    hardCount++;
 }
