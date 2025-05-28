@@ -1,77 +1,82 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easy Mode</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Quiz-e-Deen</title>
+    <link rel="stylesheet" href="F:\WEB PROJECTS\Islamic Quiz\style.css">
 </head>
 <body>
 
     <div class="container">
-        <div class="quiz-card fade-in-">
-            <!-- Header with Mode and Timer -->
-            <div class="quiz-header-easy">
-                <div class="header-left">
-                    <div class="quiz-mode">
-                        <span class="mode-icon">🟢</span>
-                        <span>Easy Mode</span>
-                    </div>
-                    <p class="quiz-subtitle">General Knowledge Quiz</p>
+        <div class="quiz-card">
+            <!-- Start Screen -->
+            <div class="start-screen" id="start-screen">
+                <div class="quiz-header">
+                    <h1 class="quiz-title">QuizMaster</h1>
+                    <p class="quiz-subtitle">Test Your Knowledge with Style</p>
                 </div>
-                <div class="header-right">
-                    <div class="timer">
-                        <svg class="timer-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"/>
-                        </svg>
-                        <span class="timer-display">2:45</span>
+                
+                <div class="start-content">
+                    <div class="welcome-section">
+                        <div class="welcome-icon">🧠</div>
+                        <h2 class="welcome-title">Ready to Challenge Yourself?</h2>
+                        <p class="welcome-description">
+                            Choose your difficulty level and test your knowledge across various topics. 
+                            Each mode offers a unique challenge!
+                        </p>
                     </div>
-                    <div class="timer-label">Time Remaining</div>
+
+                    <div class="difficulty-selection">
+                        <h3 class="difficulty-title">Select Difficulty</h3>
+                        <div class="difficulty-options">
+                            <div class="difficulty-card" data-difficulty="easy">
+                                <div class="difficulty-icon">🟢</div>
+                                <h4 class="difficulty-name">Easy</h4>
+                                <p class="difficulty-description">Perfect for beginners</p>
+                                <div class="difficulty-stats">
+                                    <span>5 Questions</span>
+                                    <span>3 Minutes</span>
+                                </div>
+                            </div>
+                            
+                            <div class="difficulty-card selected" data-difficulty="medium">
+                                <div class="difficulty-icon">🟡</div>
+                                <h4 class="difficulty-name">Medium</h4>
+                                <p class="difficulty-description">Balanced challenge</p>
+                                <div class="difficulty-stats">
+                                    <span>10 Questions</span>
+                                    <span>5 Minutes</span>
+                                </div>
+                            </div>
+                            
+                            <div class="difficulty-card" data-difficulty="hard">
+                                <div class="difficulty-icon">🔴</div>
+                                <h4 class="difficulty-name">Hard</h4>
+                                <p class="difficulty-description">Perfect for quiz masters</p>
+                                <div class="difficulty-stats">
+                                    <span>15 Questions</span>
+                                    <span>7 Minutes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="start-footer">
+                    <button class="startbtn" id="start-game-btn">
+                        <span>Start Quiz</span>
+                    </button>
                 </div>
             </div>
 
-            <!-- Progress Section -->
-            <div class="progress-section">
-                <div class="progress-header">
-                    <div class="question-counter">Question 1 of 5</div>
-                    <div class="progress-percentage">20% Complete</div>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill"></div>
-                </div>
-            </div>
-
-            <!-- Question Section -->
-            <div class="question-section">
-                <div class="question-header">
-                    <div class="question-number">
-                        <span class="question-icon">❓</span>
-                        <span>Question 1</span>
-                    </div>
-                    <h2 class="question-text">What is the capital city of France?</h2>
-                </div>
-
-                <div class="options-container">
-                    <div class="option" data-option="A">
-                        <div class="option-letter">A</div>
-                        <span>London</span>
-                    </div>
-                    <div class="option" data-option="B">
-                        <div class="option-letter">B</div>
-                        <span>Berlin</span>
-                    </div>
-                    <div class="option selected" data-option="C">
-                        <div class="option-letter">C</div>
-                        <span>Paris</span>
-                    </div>
-                    <div class="option" data-option="D">
-                        <div class="option-letter">D</div>
-                        <span>Madrid</span>
-                    </div>
-                </div>
-            </div>
+            
 
 
-    
+
+
+
+    <script src="./script.js"></script>
 </body>
 </html>
