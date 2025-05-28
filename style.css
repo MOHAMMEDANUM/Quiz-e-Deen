@@ -71,6 +71,27 @@
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.difficulty-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.startbtn{
+    background-color: deepskyblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 20px auto;
+}
+.startbtn:hover{
+    background-color: #1e90ff;
+    transform: translateY(-2px);
+}
 
 
 
