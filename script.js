@@ -17,9 +17,6 @@ let mediumCount = 0;
 let hardCount = 0;
 
 
-
-
-
 // quiz start function
 
 let quizstart = ()  => {
