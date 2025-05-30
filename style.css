@@ -418,7 +418,6 @@ p{
     font-weight: bold;
     border-radius: 15px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
     margin-left: 54vh;
 }
 .homebtnmedium-mode:hover{
@@ -426,7 +425,7 @@ p{
     color: darkcyan;
     box-shadow: 0 4px 10px darkcyan;
     border: darkcyan 3px solid;
-    transform: translateY(-2px);
+
 }
 
 .mode-icon-medium-mode{
@@ -535,6 +534,24 @@ p{
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: background-color 0.3s ease;
     
+}
+.homebtnhard-mode{
+    background-color: darkcyan;
+    color: white;
+    border: none;
+    padding: 6px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+
+    margin-left: 57vh;
+}
+.homebtnhard-mode:hover{
+    background-color: white;
+    color: darkcyan;
+    box-shadow: 0 4px 10px darkcyan;
+    border: darkcyan 3px solid;
 }
 
 .mode-icon-hard-mode{
