@@ -226,6 +226,18 @@ p{
 .quiz-mode{
     margin-right: auto;
 }
+.homebtn{
+    background-color: darkcyan;
+    color: white;
+    border: none;
+    padding: 6px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-left: 57vh;
+}
 
 .mode-icon{
     font-size: 25px;
