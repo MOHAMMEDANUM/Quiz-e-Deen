@@ -224,9 +224,9 @@ p{
 
 
 .quiz-mode{
-    margin-right: auto;
+    /* margin-right: auto; */
 }
-.homebtn{
+.homebtneasy-mode{
     background-color: darkcyan;
     color: white;
     border: none;
@@ -237,6 +237,13 @@ p{
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     margin-left: 57vh;
+}
+.homebtneasy-mode:hover{
+    background-color: white;
+    color: darkcyan;
+    box-shadow: 0 4px 10px darkcyan;
+    border: darkcyan 3px solid;
+    transform: translateY(-2px);
 }
 
 .mode-icon{
@@ -400,6 +407,26 @@ p{
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: background-color 0.3s ease;
     
+}
+
+.homebtnmedium-mode{
+    background-color: darkcyan;
+    color: white;
+    border: none;
+    padding: 6px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-left: 54vh;
+}
+.homebtnmedium-mode:hover{
+    background-color: white;
+    color: darkcyan;
+    box-shadow: 0 4px 10px darkcyan;
+    border: darkcyan 3px solid;
+    transform: translateY(-2px);
 }
 
 .mode-icon-medium-mode{
