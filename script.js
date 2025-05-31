@@ -79,6 +79,14 @@ let hardModeStart = () => {
     mediumMode[0].style="display: none;";
 }
 
+// question selectors
+
+let questionText =document.querySelector(".question-text")
+let optionLetterA = document.querySelector(".option-letter-A")
+let optionLetterB = document.querySelector(".option-letter-B")
+let optionLetterC = document.querySelector(".option-letter-C")
+let optionLetterD = document.querySelector(".option-letter-D")
+
 
 
 //  Question of easy mode
@@ -116,3 +124,5 @@ let easyModeQuestion = [
     }
 
 ]
+
+
