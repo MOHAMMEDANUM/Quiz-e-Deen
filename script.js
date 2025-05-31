@@ -183,6 +183,12 @@ let i = 1
 let nextBtn = ()=>{
 
     questionText.innerHTML= easyModeQuestion[i].question
+
+    optionLetterA.innerHTML =easyModeQuestion[i].options[0]
+    optionLetterB.innerHTML =easyModeQuestion[i].options[1]
+    optionLetterC.innerHTML =easyModeQuestion[i].options[2]
+    optionLetterD.innerHTML =easyModeQuestion[i].options[3]
+
     if(i<easyModeQuestion.length-1)
     i++
 
