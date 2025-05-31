@@ -85,8 +85,14 @@ let hardModeStart = () => {
 
 // Selecting option function
 
+let optionDiv = document.querySelector(".option")
+
 let optionSelecting = (e)=>{
 
+    let optionDesign = e.target.innerHTML
+    // console.log(optionDesign);
+    // console.log(optionDiv);
+    optionDiv.style="background-color:limegreen;color:white"  
 }
 
 
