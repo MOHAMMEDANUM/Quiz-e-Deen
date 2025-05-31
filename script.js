@@ -92,6 +92,8 @@ let optionSelecting = (e)=>{
     let optionDesign = e.target.innerHTML
     // console.log(optionDesign);
     // console.log(optionDiv);
+
+    
     optionDiv.style="background-color:limegreen;color:white"  
 }
 
@@ -177,11 +179,12 @@ if(correctOption==easyModeQuestion[0].answer){
 
 
 
-
-
+let i = 1
 let nextBtn = ()=>{
 
-
+    questionText.innerHTML= easyModeQuestion[i].question
+    if(i<easyModeQuestion.length-1)
+    i++
 
 }
 nextGameButton.addEventListener("click",nextBtn)
