@@ -82,6 +82,16 @@ let hardModeStart = () => {
     mediumMode[0].style="display: none;";
 }
 
+
+// Selecting option function
+
+let optionSelecting = (e)=>{
+
+}
+
+
+
+
 // question selector
 
 let questionText =  document.querySelector(".question-text")
@@ -154,7 +164,10 @@ optionLetterD.innerHTML =easyModeQuestion[0].options[3]
 
 // Answer Checking
 
-
+if(correctOption==easyModeQuestion[0].answer){
+    console.log("winner");
+    
+}
 
 
 
