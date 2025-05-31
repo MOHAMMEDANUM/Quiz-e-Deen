@@ -235,7 +235,6 @@ p{
     font-weight: bold;
     border-radius: 15px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
     margin-left: 57vh;
 }
 .homebtneasy-mode:hover{
@@ -243,7 +242,6 @@ p{
     color: darkcyan;
     box-shadow: 0 4px 10px darkcyan;
     border: darkcyan 3px solid;
-    transform: translateY(-2px);
 }
 
 .mode-icon{
@@ -544,7 +542,6 @@ p{
     font-weight: bold;
     border-radius: 15px;
     cursor: pointer;
-
     margin-left: 57vh;
 }
 .homebtnhard-mode:hover{

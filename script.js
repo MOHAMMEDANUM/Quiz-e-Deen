@@ -78,3 +78,41 @@ let hardModeStart = () => {
     easyMode[0].style="display: none;";
     mediumMode[0].style="display: none;";
 }
+
+
+
+//  Question of easy mode
+
+let easyModeQuestion = [
+
+    {
+        question : "What are the five pillars of Islam?",
+        options = ["Shahada, Zakat, Hajj, Sawm, Salat "," Zakat, Sawm, Salat, Hajj, Shahada","Salat, Sawm, Shahada, Zakat, Hajj","Hajj, Sawm, Zakat, Shahada, Salat "],
+        answer : "Shahada, Zakat, Hajj, Sawm, Salat"
+    }
+
+    {
+
+        question : " Which of the following is the first pillar of Islam?",
+        options = ["Shahada","Zakat","Hajj","Salat"],
+        answer : "Shahada"
+
+    }
+
+    {
+
+        question : " What does the term Shahada refer to?",
+        options = ["Almsgiving","Fasting","Pilgrimage","Declaration of Faith"],
+        answer : "Declaration of Faith"
+
+    }
+
+    {
+
+        question : " Which of the following is a term for the obligatory prayers in Islam?",
+        options = ["Zakat ","Sawm","Salat","Hajj"],
+        answer : "Salat"
+
+    }
+
+]
