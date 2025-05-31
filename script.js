@@ -4,6 +4,8 @@
 // quiz start btn  declaration
 
 let quizStartBtn = document.getElementById("start-game-btn");
+// console.log(quizStartBtn);
+
 
 
 //  quiz section difficulty levels cards
@@ -42,7 +44,8 @@ let quizstart = ()  => {
     }
         
 }
-quizStartBtn.addEventListener("click",quizstart)
+
+
 
 //  easy mode function
 
@@ -82,12 +85,12 @@ let hardModeStart = () => {
 // question selectors
 
 let questionText =  document.querySelector(".question-text")
-let optionLetterA = document.querySelector(".option-letter-A")
-let optionLetterB = document.querySelector(".option-letter-B")
-let optionLetterC = document.querySelector(".option-letter-C")
-let optionLetterD = document.querySelector(".option-letter-D")
+let optionLetterA = document.querySelector("#option-letter-A")
+let optionLetterB = document.querySelector("#option-letter-B")
+let optionLetterC = document.querySelector("#option-letter-C")
+let optionLetterD = document.querySelector("#option-letter-D")
 
-let nextGameButton = document.getElementById(next-game-btn)
+let nextGameButton = document.getElementById("next-game-btn")
 
 
 
@@ -99,37 +102,49 @@ let easyModeQuestion = [
 
     {
         question : "What are the five pillars of Islam?",
-        options = ["Shahada, Zakat, Hajj, Sawm, Salat "," Zakat, Sawm, Salat, Hajj, Shahada","Salat, Sawm, Shahada, Zakat, Hajj","Hajj, Sawm, Zakat, Shahada, Salat "],
+        options : ["Shahada, Zakat, Hajj, Sawm, Salat "," Zakat, Sawm, Salat, Hajj, Shahada","Salat, Sawm, Shahada, Zakat, Hajj","Hajj, Sawm, Zakat, Shahada, Salat "],
         answer : "Shahada, Zakat, Hajj, Sawm, Salat"
-    }
+    },
 
     {
 
         question : " Which of the following is the first pillar of Islam?",
-        options = ["Shahada","Zakat","Hajj","Salat"],
+        options : ["Shahada","Zakat","Hajj","Salat"],
         answer : "Shahada"
 
-    }
+    },
 
     {
 
         question : " What does the term Shahada refer to?",
-        options = ["Almsgiving","Fasting","Pilgrimage","Declaration of Faith"],
+        options : ["Almsgiving","Fasting","Pilgrimage","Declaration of Faith"],
         answer : "Declaration of Faith"
 
-    }
+    },
 
     {
 
         question : " Which of the following is a term for the obligatory prayers in Islam?",
-        options = ["Zakat ","Sawm","Salat","Hajj"],
+        options : ["Zakat ","Sawm","Salat","Hajj"],
         answer : "Salat"
 
     }
 
 ]
 
-// question Inputing in easy mode
+// Question Inputing in easy mode
+
+questionText.innerHTML= easyModeQuestion[0].question
+console.log(questionText.innerHTML);
+
+// Question Options input
+
+optionLetterA.innerHTML =easyModeQuestion[0].options[0]
+optionLetterB.innerHTML =easyModeQuestion[0].options[1]
+optionLetterC.innerHTML =easyModeQuestion[0].options[2]
+optionLetterD.innerHTML =easyModeQuestion[0].options[3]
+
+
 
 
 let nextBtn = ()=>{
