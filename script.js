@@ -83,22 +83,7 @@ let hardModeStart = () => {
 }
 
 
-// Selecting option function
-
-let optionDiv = document.querySelector(".option")
-
-let optionSelecting = (e)=>{
-
-    let optionDesign = e.target.innerHTML
-    // console.log(optionDesign);
-    // console.log(optionDiv);
-
-    
-    optionDiv.style="background-color:limegreen;color:white"  
-}
-
-
-
+//  Working on the easy mode question, option and answer functionalities
 
 // question selector
 
@@ -110,15 +95,28 @@ let optionLetterB = document.querySelector("#option-letter-B")
 let optionLetterC = document.querySelector("#option-letter-C")
 let optionLetterD = document.querySelector("#option-letter-D")
 
-// Answer declare
-
-let correctOption
-
-
-
+// Next Question Button
 let nextGameButton = document.getElementById("next-game-btn")
 
+// Previous Question Button
+let previousGameButton = document.getElementById("previous-game-btn")
 
+
+// Selecting option function
+
+let optionDiv = document.querySelector(".option")
+console.log(optionDiv.innerText);
+
+
+let optionSelecting = (e)=>{
+
+    let optionDesign = e.target.innerHTML
+    // console.log(optionDesign);
+    // console.log(optionDiv);
+
+    optionDiv.style="background-color:purple;color:white" 
+
+}
 
 
 
@@ -158,10 +156,15 @@ let easyModeQuestion = [
 
 ]
 
+// Answer declare
+
+let correctOption = easyModeQuestion[0].answer 
+
+
 // Question Inputing in easy mode
 
 questionText.innerHTML= easyModeQuestion[0].question
-console.log(questionText.innerHTML);
+// console.log(questionText.innerHTML);
 
 // Question Options input
 
@@ -172,10 +175,16 @@ optionLetterD.innerHTML =easyModeQuestion[0].options[3]
 
 // Answer Checking
 
-if(correctOption==easyModeQuestion[0].answer){
+if(correctOption==optionDiv[1]){
     console.log("winner");
+    optionDiv.style="background-color:limegreen;color:white"  
+
     
 }
+
+
+
+
 
 
 
@@ -194,3 +203,19 @@ let nextBtn = ()=>{
 
 }
 nextGameButton.addEventListener("click",nextBtn)
+
+let j=i
+let previousBtn = ()=>{
+
+    questionText.innerHTML= easyModeQuestion[j].question
+
+    optionLetterA.innerHTML =easyModeQuestion[j].options[0]
+    optionLetterB.innerHTML =easyModeQuestion[j].options[1]
+    optionLetterC.innerHTML =easyModeQuestion[j].options[2]
+    optionLetterD.innerHTML =easyModeQuestion[j].options[3]
+
+    if(j>0)
+    j--
+
+}
+previousGameButton.addEventListener("click",previousBtn)
