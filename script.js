@@ -152,6 +152,22 @@ let easyModeQuestion = [
         options : ["Zakat ","Sawm","Salat","Hajj"],
         answer : "Salat"
 
+    },
+
+    {
+
+        question : " who?",
+        options : ["Zakat ","Sawm","Salat","Hajj"],
+        answer : "Salat"
+
+    },
+
+    {
+
+        question : " how?",
+        options : ["Zakat ","Sawm","Salat","Hajj"],
+        answer : "Salat"
+
     }
 
 ]
@@ -187,7 +203,7 @@ if(correctOption==optionDiv[1]){
 
 
 
-
+let res
 let i = 1
 let nextBtn = ()=>{
 
@@ -198,13 +214,18 @@ let nextBtn = ()=>{
     optionLetterC.innerHTML =easyModeQuestion[i].options[2]
     optionLetterD.innerHTML =easyModeQuestion[i].options[3]
 
-    if(i<easyModeQuestion.length-1)
-    i++
+    if(i<=easyModeQuestion.length-1){
+    res = i++
+    console.log(res);}
+    else{
+        nextGameButton.style="Display:none"
+    }
+
 
 }
 nextGameButton.addEventListener("click",nextBtn)
 
-let j=i
+let j=res
 let previousBtn = ()=>{
 
     questionText.innerHTML= easyModeQuestion[j].question
