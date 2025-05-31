@@ -82,13 +82,21 @@ let hardModeStart = () => {
     mediumMode[0].style="display: none;";
 }
 
-// question selectors
+// question selector
 
 let questionText =  document.querySelector(".question-text")
+
+// Options selectors
 let optionLetterA = document.querySelector("#option-letter-A")
 let optionLetterB = document.querySelector("#option-letter-B")
 let optionLetterC = document.querySelector("#option-letter-C")
 let optionLetterD = document.querySelector("#option-letter-D")
+
+// Answer declare
+
+let correctOption
+
+
 
 let nextGameButton = document.getElementById("next-game-btn")
 
@@ -144,10 +152,17 @@ optionLetterB.innerHTML =easyModeQuestion[0].options[1]
 optionLetterC.innerHTML =easyModeQuestion[0].options[2]
 optionLetterD.innerHTML =easyModeQuestion[0].options[3]
 
+// Answer Checking
+
+
+
+
 
 
 
 let nextBtn = ()=>{
+
+
 
 }
 nextGameButton.addEventListener("click",nextBtn)
