@@ -261,7 +261,7 @@ p{
 }
 
 .startbtn-easy-mode{
-    display: ;
+    display: block;
     background-color:steelblue;
     color: white;
     border: none;

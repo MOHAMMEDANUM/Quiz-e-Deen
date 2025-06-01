@@ -201,7 +201,7 @@ if(correctOption==optionDiv[1]){
 
 
 
-
+// Next button function
 
 let res
 let i = 1
@@ -218,10 +218,10 @@ let nextBtn = ()=>{
     res = i++
     console.log(res);}
     else{
-        nextGameButton.style="Display:none"
+        nextGameButton.style="display:none"
+        console.log("jvgjhvv");
+        
     }
-
-
 }
 nextGameButton.addEventListener("click",nextBtn)
 
