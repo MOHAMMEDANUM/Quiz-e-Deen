@@ -225,6 +225,8 @@ let nextBtn = ()=>{
 }
 nextGameButton.addEventListener("click",nextBtn)
 
+// Previous Btn function
+
 let j=res
 let previousBtn = ()=>{
 
