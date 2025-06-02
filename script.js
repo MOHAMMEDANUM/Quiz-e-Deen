@@ -217,15 +217,13 @@ let nextBtn = ()=>{
     optionLetterB.innerHTML =easyModeQuestion[i].options[1]
     optionLetterC.innerHTML =easyModeQuestion[i].options[2]
     optionLetterD.innerHTML =easyModeQuestion[i].options[3]
-    
+
     res = i++
     console.log(res);
-    }
-    else if(i>=easyModeQuestion.length){
-        i=easyModeQuestion.length
+    if(i>easyModeQuestion.length-1){
         nextGameButton.style="display:none"
         console.log("jvgjhvv");
-        
+    }
     }
 }
 nextGameButton.addEventListener("click",nextBtn)
