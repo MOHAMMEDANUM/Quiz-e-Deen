@@ -203,21 +203,26 @@ if(correctOption==optionDiv[1]){
 
 // Next button function
 
-let res
-let i = 1
+let res=1
+let i = res
 let nextBtn = ()=>{
 
-    questionText.innerHTML= easyModeQuestion[i].question
 
+    if(i<=easyModeQuestion.length-1){
+
+    questionText.innerHTML= easyModeQuestion[i].question
+    console.log(questionText.innerHTML);
+    
     optionLetterA.innerHTML =easyModeQuestion[i].options[0]
     optionLetterB.innerHTML =easyModeQuestion[i].options[1]
     optionLetterC.innerHTML =easyModeQuestion[i].options[2]
     optionLetterD.innerHTML =easyModeQuestion[i].options[3]
-
-    if(i<=easyModeQuestion.length-1){
+    
     res = i++
-    console.log(res);}
-    else if(i>easyModeQuestion.length){
+    console.log(res);
+    }
+    else if(i>=easyModeQuestion.length){
+        i=easyModeQuestion.length
         nextGameButton.style="display:none"
         console.log("jvgjhvv");
         
@@ -227,7 +232,7 @@ nextGameButton.addEventListener("click",nextBtn)
 
 // Previous Btn function
 
-let j=Number(i++)
+let j=Number(res)
 let previousBtn = ()=>{
 
     if(j>0)
@@ -239,6 +244,7 @@ let previousBtn = ()=>{
     optionLetterB.innerHTML =easyModeQuestion[j].options[1]
     optionLetterC.innerHTML =easyModeQuestion[j].options[2]
     optionLetterD.innerHTML =easyModeQuestion[j].options[3]
+    nextGameButton.addEventListener("click",nextBtn)
 
 
 }
