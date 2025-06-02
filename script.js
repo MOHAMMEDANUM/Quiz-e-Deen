@@ -241,18 +241,18 @@ let nextBtn = ()=>{
 
     // Question Number Inputing
     questionNumber.innerHTML=`Question ${i}`
-    questionCounter.innerHTML=`Question ${i} of 6`
+    questionCounter.innerHTML=`Question ${i} of ${easyModeQuestion.length}`
 
     // Progress Percentage Inputing
-    progressPercentage.innerHTML=Math.floor(((`${i}`/6)*100))+"% Complete"
+    progressPercentage.innerHTML=Math.floor(((`${i}`/`${easyModeQuestion.length}`)*100))+"% Complete"
 
     // progress fill Inputing
-    let fill=Math.floor(((`${i}`/6)*100))
-    progressFill.style="width:"+fill+"%"
+    progressFill.style="width:"+Math.floor(((`${i}`/`${easyModeQuestion.length}`)*100))+"%"
 
     
     }
-        // disable nextbtn for last
+
+    // disable nextbtn for last
 
     if(i>easyModeQuestion.length-1){
             nextGameButton.style="display:none"
@@ -283,14 +283,13 @@ let previousBtn = ()=>{
 
     // Question Number Inputing
     questionNumber.innerHTML=`Question ${i+1}`
-    questionCounter.innerHTML=`Question ${i+1} of 6`
+    questionCounter.innerHTML=`Question ${i+1} of ${easyModeQuestion.length}`
 
     // Progress Percentage Inputing
-    progressPercentage.innerHTML=Math.floor(((`${i+1}`/6)*100))+"% Complete"
+    progressPercentage.innerHTML=Math.floor(((`${i+1}`/`${easyModeQuestion.length}`)*100))+"% Complete"
 
     // progress fill Inputing
-    let fill=Math.floor(((`${i+1}`/6)*100))
-    progressFill.style="width:"+fill+"%"
+    progressFill.style="width:"+Math.floor(((`${i+1}`/`${easyModeQuestion.length}`)*100))+"%"
 
 
 
@@ -305,4 +304,4 @@ let previousBtn = ()=>{
     }
 }
 previousGameButton.addEventListener("click",previousBtn)
-// Question Number Inputing
+
