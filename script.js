@@ -206,10 +206,21 @@ if(correctOption==optionDiv[1]){
 
 let i = 1
 let nextBtn = ()=>{
+
+    // disable nextbtn for last
+
+    if(i>easyModeQuestion.length-1){
+            nextGameButton.style="display:none"
+            i=easyModeQuestion.length-1
+            console.log(i);
+            return
+    }
+
+    // nextBtn increment
     
-
-
     if(i<=easyModeQuestion.length-1){
+    
+    previousGameButton.style="display:block"
 
     questionText.innerHTML= easyModeQuestion[i].question
     console.log(questionText.innerHTML);
@@ -220,16 +231,6 @@ let nextBtn = ()=>{
     optionLetterD.innerHTML =easyModeQuestion[i].options[3]
 
     i++;
-    // console.log(res);
-    
-    // disable nextbtn for last
-
-        if(i>easyModeQuestion.length-1){
-            nextGameButton.style="display:none"
-            i=easyModeQuestion.length-1
-            console.log(i);
-        }
-
     }
 }
 nextGameButton.addEventListener("click",nextBtn)
@@ -244,7 +245,7 @@ let previousBtn = ()=>{
             console.log(i);
             return
         }
-    nextGameButton.style="display:block"
+        nextGameButton.style="display:block"
 
     if(i>=0){
     
@@ -255,10 +256,8 @@ let previousBtn = ()=>{
     optionLetterB.innerHTML =easyModeQuestion[i].options[1]
     optionLetterC.innerHTML =easyModeQuestion[i].options[2]
     optionLetterD.innerHTML =easyModeQuestion[i].options[3]
+    previousGameButton.style="display:block"
     return
-
     }
-
-
 }
 previousGameButton.addEventListener("click",previousBtn)
