@@ -1,6 +1,10 @@
 // Quiz Website JavaScript Code
 
 
+
+                    //          Home Page Start
+
+
 // quiz start btn  declaration
 
 let quizStartBtn = document.getElementById("start-game-btn");
@@ -46,7 +50,6 @@ let quizstart = ()  => {
 }
 
 
-
 //  easy mode function
 
 let easyModeStart = () => {
@@ -82,8 +85,13 @@ let hardModeStart = () => {
     mediumMode[0].style="display: none;";
 }
 
+                    //          Home Page End
 
-//  Working on the easy mode question, option and answer functionalities
+
+
+                    //          Easy Mode Page Start
+
+//  Working on the Easy Mode Question, option and answer functionalities
 
 // question selector
 
@@ -106,9 +114,11 @@ let questionNumber=document.getElementById("ques-no")
 // Progress percentage selector
 let progressPercentage=document.getElementById("progress-percentage")
 
-// progress fill Inputing
+// progress fill selector
 let progressFill=document.getElementById("progress-fill")
 
+// timer display selector
+let timerDisplay=document.getElementById("timer-display")
 
 
 
@@ -121,19 +131,11 @@ let previousGameButton = document.getElementById("previous-game-btn")
 
 // Selecting option function
 
-let optionDiv = document.querySelector(".option")
-console.log(optionDiv.innerText);
+let optionDiv = document.getElementsByClassName("option")
+let optionletterA =document.getElementById("option-letter-A")
+// console.log(optionDiv);
 
-
-let optionSelecting = (e)=>{
-
-    let optionDesign = e.target.innerHTML
-    // console.log(optionDesign);
-    // console.log(optionDiv);
-
-    optionDiv.style="background-color:purple;color:white" 
-
-}
+// console.log(optionletterA.innerHTML);
 
 
 
@@ -191,7 +193,8 @@ let easyModeQuestion = [
 
 // Answer declare
 
-let correctOption = easyModeQuestion[0].answer 
+let correctOption = easyModeQuestion[0].answer
+console.log(correctOption);
 
 
 // Question Inputing in easy mode
@@ -206,15 +209,33 @@ optionLetterB.innerHTML =easyModeQuestion[0].options[1]
 optionLetterC.innerHTML =easyModeQuestion[0].options[2]
 optionLetterD.innerHTML =easyModeQuestion[0].options[3]
 
+// Option Selecting function
 
-// Answer Checking
+let optionSelecting = (e)=>{
 
-if(correctOption==optionDiv[1]){
-    console.log("winner");
-    optionDiv.style="background-color:limegreen;color:white"  
-
+    let optionDesign = e.target.innerHTML
+    console.log(optionDesign);
+    // console.log(optionDiv[0]);// Answer Checking
+    if(String(correctOption)==String(optionDesign)){
+        optionDiv[0].style="background-color:red;color:white"  
+        console.log("Looser");
+    }
+    console.log(correctOption);
+    console.log(optionDesign);
+    console.log(correctOption==optionDesign);
     
+    
+    // optionDiv[0].style="background-color:limegreen;color:white" 
 }
+
+
+    // timer display Inputing
+    let clock = ()=>{
+    let time = new Date()
+    timerDisplay.innerHTML=60-time.getSeconds()
+    }
+    setInterval(clock,1000)
+
 
 
 // Next button function
@@ -262,6 +283,7 @@ let nextBtn = ()=>{
     }
 }
 nextGameButton.addEventListener("click",nextBtn)
+
 
 
 
