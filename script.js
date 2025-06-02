@@ -95,6 +95,10 @@ let optionLetterB = document.querySelector("#option-letter-B")
 let optionLetterC = document.querySelector("#option-letter-C")
 let optionLetterD = document.querySelector("#option-letter-D")
 
+// Question Number selector
+
+let questionNumber=document.getElementById("ques-no")
+
 // Next Question Button
 let nextGameButton = document.getElementById("next-game-btn")
 
@@ -189,6 +193,7 @@ optionLetterB.innerHTML =easyModeQuestion[0].options[1]
 optionLetterC.innerHTML =easyModeQuestion[0].options[2]
 optionLetterD.innerHTML =easyModeQuestion[0].options[3]
 
+
 // Answer Checking
 
 if(correctOption==optionDiv[1]){
@@ -199,28 +204,16 @@ if(correctOption==optionDiv[1]){
 }
 
 
-
-
 // Next button function
 
 
 let i = 1
 let nextBtn = ()=>{
 
-    // disable nextbtn for last
-
-    if(i>easyModeQuestion.length-1){
-            nextGameButton.style="display:none"
-            i=easyModeQuestion.length-1
-            console.log(i);
-            return
-    }
-
     // nextBtn increment
     
     if(i<=easyModeQuestion.length-1){
     
-    previousGameButton.style="display:block"
 
     questionText.innerHTML= easyModeQuestion[i].question
     console.log(questionText.innerHTML);
@@ -231,9 +224,22 @@ let nextBtn = ()=>{
     optionLetterD.innerHTML =easyModeQuestion[i].options[3]
 
     i++;
+    previousGameButton.style="display:block"
+    questionNumber.innerHTML=`Question ${i}`
+    
+    }
+        // disable nextbtn for last
+
+    if(i>easyModeQuestion.length-1){
+            nextGameButton.style="display:none"
+            i=easyModeQuestion.length-1
+            console.log(i);
+            return
     }
 }
 nextGameButton.addEventListener("click",nextBtn)
+
+
 
 // Previous Btn function
 
@@ -250,6 +256,9 @@ let previousBtn = ()=>{
     if(i>=0){
     
     i--
+
+    questionNumber.innerHTML=`Question ${i+1}`
+
     questionText.innerHTML= easyModeQuestion[i].question
 
     optionLetterA.innerHTML =easyModeQuestion[i].options[0]
@@ -261,3 +270,4 @@ let previousBtn = ()=>{
     }
 }
 previousGameButton.addEventListener("click",previousBtn)
+// Question Number Inputing
