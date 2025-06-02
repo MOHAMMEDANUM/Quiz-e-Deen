@@ -106,6 +106,12 @@ let questionNumber=document.getElementById("ques-no")
 // Progress percentage selector
 let progressPercentage=document.getElementById("progress-percentage")
 
+// progress fill Inputing
+let progressFill=document.getElementById("progress-fill")
+
+
+
+
 // Next Question Button
 let nextGameButton = document.getElementById("next-game-btn")
 
@@ -239,6 +245,11 @@ let nextBtn = ()=>{
 
     // Progress Percentage Inputing
     progressPercentage.innerHTML=Math.floor(((`${i}`/6)*100))+"% Complete"
+
+    // progress fill Inputing
+    let fill=Math.floor(((`${i}`/6)*100))
+    progressFill.style="width:"+fill+"%"
+
     
     }
         // disable nextbtn for last
@@ -276,6 +287,11 @@ let previousBtn = ()=>{
 
     // Progress Percentage Inputing
     progressPercentage.innerHTML=Math.floor(((`${i+1}`/6)*100))+"% Complete"
+
+    // progress fill Inputing
+    let fill=Math.floor(((`${i+1}`/6)*100))
+    progressFill.style="width:"+fill+"%"
+
 
 
     questionText.innerHTML= easyModeQuestion[i].question

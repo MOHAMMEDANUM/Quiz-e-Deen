@@ -311,8 +311,10 @@ p{
 }
 
 .progress-fill{
-    margin: auto;
-    width: 100%;
+    margin-left: 15px;
+    /* margin-right:15px ; */
+    /* margin: auto; */
+    width: 16%;
     height: 15px;
     background-color: limegreen;
     border-radius: 10px;
