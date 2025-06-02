@@ -95,9 +95,16 @@ let optionLetterB = document.querySelector("#option-letter-B")
 let optionLetterC = document.querySelector("#option-letter-C")
 let optionLetterD = document.querySelector("#option-letter-D")
 
+// Question counter selector
+
+let questionCounter=document.getElementById("question-counter")
+
 // Question Number selector
 
 let questionNumber=document.getElementById("ques-no")
+
+// Progress percentage selector
+let progressPercentage=document.getElementById("progress-percentage")
 
 // Next Question Button
 let nextGameButton = document.getElementById("next-game-btn")
@@ -225,7 +232,13 @@ let nextBtn = ()=>{
 
     i++;
     previousGameButton.style="display:block"
+
+    // Question Number Inputing
     questionNumber.innerHTML=`Question ${i}`
+    questionCounter.innerHTML=`Question ${i} of 6`
+
+    // Progress Percentage Inputing
+    progressPercentage.innerHTML=Math.floor(((`${i}`/6)*100))+"% Complete"
     
     }
         // disable nextbtn for last
@@ -257,7 +270,13 @@ let previousBtn = ()=>{
     
     i--
 
+    // Question Number Inputing
     questionNumber.innerHTML=`Question ${i+1}`
+    questionCounter.innerHTML=`Question ${i+1} of 6`
+
+    // Progress Percentage Inputing
+    progressPercentage.innerHTML=Math.floor(((`${i+1}`/6)*100))+"% Complete"
+
 
     questionText.innerHTML= easyModeQuestion[i].question
 
