@@ -217,7 +217,7 @@ let nextBtn = ()=>{
     if(i<=easyModeQuestion.length-1){
     res = i++
     console.log(res);}
-    else{
+    else if(i>easyModeQuestion.length){
         nextGameButton.style="display:none"
         console.log("jvgjhvv");
         
@@ -227,8 +227,11 @@ nextGameButton.addEventListener("click",nextBtn)
 
 // Previous Btn function
 
-let j=res
+let j=Number(i++)
 let previousBtn = ()=>{
+
+    if(j>0)
+    j--
 
     questionText.innerHTML= easyModeQuestion[j].question
 
@@ -237,8 +240,6 @@ let previousBtn = ()=>{
     optionLetterC.innerHTML =easyModeQuestion[j].options[2]
     optionLetterD.innerHTML =easyModeQuestion[j].options[3]
 
-    if(j>0)
-    j--
 
 }
 previousGameButton.addEventListener("click",previousBtn)
