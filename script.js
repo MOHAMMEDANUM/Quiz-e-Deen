@@ -155,7 +155,7 @@ let easyModeQuestion = [
 
     {
         question : "What are the five pillars of Islam?",
-        options : ["Shahada, Zakat, Hajj, Sawm, Salat","Zakat, Sawm, Salat, Hajj, Shahada","Salat, Sawm, Shahada, Zakat, Hajj","Hajj, Sawm, Zakat, Shahada, Salat "],
+        options : ["Shahada, Zakat, Hajj, Sawm, Salat","Zakat, Sawm, Salat, Hajj, Shahada","Salat, Sawm, Shahada, Zakat, Hajj","Hajj, Sawm, Zakat, Shahada, Salat"],
         answer : "Shahada, Zakat, Hajj, Sawm, Salat"
     },
 
@@ -221,30 +221,7 @@ optionLetterD.innerHTML =easyModeQuestion[0].options[3]
 
 // Option Selecting function
 
-let optionSelecting = (e)=>{
 
-    let optionDesign = e.target.innerHTML
-    // console.log(optionDesign,typeof(correctOption));
-
-    // console.log(optionDiv[0]);// Answer Checking
-    
-    if(correctOption==optionDesign){
-        optionDiv[0].style="background-color:limegreen;color:white"
-
-        optionLetter.style="background-color:rgba(134, 205, 150, 0.63);color:white"
-        
-        console.log("Winner");
-        return
-    }
-    else{
-        optionDesign.style="background-color:red;color:white"
-        optionLetter.style="background-color:rgba(214, 146, 146, 0.63);color:white"
-    } 
-    console.log(correctOption==optionDesign);
-    
-    
-    // optionDiv[0].style="background-color:limegreen;color:white" 
-}
 
 
     // timer display Inputing
@@ -274,6 +251,10 @@ let i = 1
 let nextBtn = ()=>{
 
     // nextBtn increment
+    optionDiv[i-1].style="background-color:white"
+    optionLetter.style="background-color:rgba(40, 167, 69, 0.1);color:limegreen"
+
+    
     
     if(i<=easyModeQuestion.length-1){
     
@@ -286,7 +267,7 @@ let nextBtn = ()=>{
     optionLetterC.innerHTML =easyModeQuestion[i].options[2]
     optionLetterD.innerHTML =easyModeQuestion[i].options[3]
 
-    i++;
+    i++
     previousGameButton.style="display:block"
 
     // Question Number Inputing
@@ -320,15 +301,15 @@ nextGameButton.addEventListener("click",nextBtn)
 
 let previousBtn = ()=>{
 
-    if(i<=0){
+    if(i<1){
             previousGameButton.style="display:none"
-            i=0
+            // i=0
             console.log(i);
             return
         }
         nextGameButton.style="display:block"
 
-    if(i>=0){
+    if(i>0){
     
     i--
 
@@ -342,7 +323,6 @@ let previousBtn = ()=>{
     // progress fill Inputing
     progressFill.style="width:"+Math.floor(((`${i+1}`/`${easyModeQuestion.length}`)*100))+"%"
 
-
     questionText.innerHTML= easyModeQuestion[i].question
 
     optionLetterA.innerHTML =easyModeQuestion[i].options[0]
@@ -350,9 +330,38 @@ let previousBtn = ()=>{
     optionLetterC.innerHTML =easyModeQuestion[i].options[2]
     optionLetterD.innerHTML =easyModeQuestion[i].options[3]
     previousGameButton.style="display:block"
-    return
+
     }
 }
 previousGameButton.addEventListener("click",previousBtn)
+
+let optionSelecting = (e)=>{
+
+    console.log(i);
+    correctOption = easyModeQuestion[i-1].answer
+    console.log(correctOption);
+    
+    let optionDesign = e.target.innerHTML
+    // console.log(optionDesign,typeof(correctOption));
+
+    // console.log(optionDiv[0]);// Answer Checking
+    
+    if(correctOption==optionDesign){
+        optionDiv[i-1].style="background-color:limegreen;color:white"
+
+        optionLetter.style="background-color:rgba(134, 205, 150, 0.63);color:white"
+        
+        console.log("Winner");
+        return
+    }
+    else{
+        optionDesign.style="background-color:red;color:white"
+        optionLetter.style="background-color:rgba(214, 146, 146, 0.63);color:white"
+    } 
+    console.log(correctOption==optionDesign);
+    
+    
+    // optionDiv[0].style="background-color:limegreen;color:white" 
+}
 
 
