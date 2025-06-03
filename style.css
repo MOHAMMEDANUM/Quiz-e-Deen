@@ -251,6 +251,10 @@ p{
     transition: transform 0.3s ease;
 }
 
+.question-section{
+    display: block;
+}
+
 .start-footer-easy-mode{
     display: flex;
     justify-content: center;

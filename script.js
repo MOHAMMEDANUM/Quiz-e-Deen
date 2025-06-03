@@ -121,6 +121,10 @@ let progressFill=document.getElementById("progress-fill")
 let timerDisplay=document.getElementById("timer-display")
 
 
+// question full body section
+let questionSection=document.getElementById("question-section")
+
+
 
 // Next Question Button
 let nextGameButton = document.getElementById("next-game-btn")
@@ -194,7 +198,7 @@ let easyModeQuestion = [
 // Answer declare
 
 let correctOption = easyModeQuestion[0].answer
-console.log(correctOption);
+// console.log(correctOption);
 
 
 // Question Inputing in easy mode
@@ -220,8 +224,6 @@ let optionSelecting = (e)=>{
         optionDiv[0].style="background-color:red;color:white"  
         console.log("Looser");
     }
-    console.log(correctOption);
-    console.log(optionDesign);
     console.log(correctOption==optionDesign);
     
     
@@ -230,12 +232,18 @@ let optionSelecting = (e)=>{
 
 
     // timer display Inputing
+    let d=60;
     let clock = ()=>{
-    let time = new Date()
-    timerDisplay.innerHTML=60-time.getSeconds()
+    timerDisplay.innerHTML=--d
+    if(d<=0){
+        questionSection.style="display:none;height:60vh"
+        d=0
+        timerDisplay.innerHTML=d
+        console.log("jahbkj");
+        return        
+    }
     }
     setInterval(clock,1000)
-
 
 
 // Next button function
@@ -314,7 +322,6 @@ let previousBtn = ()=>{
     progressFill.style="width:"+Math.floor(((`${i+1}`/`${easyModeQuestion.length}`)*100))+"%"
 
 
-
     questionText.innerHTML= easyModeQuestion[i].question
 
     optionLetterA.innerHTML =easyModeQuestion[i].options[0]
@@ -326,4 +333,5 @@ let previousBtn = ()=>{
     }
 }
 previousGameButton.addEventListener("click",previousBtn)
+
 
