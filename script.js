@@ -251,8 +251,8 @@ let i = 1
 let nextBtn = ()=>{
 
     // nextBtn increment
-    optionDiv[i-1].style="background-color:white"
-    optionLetter.style="background-color:rgba(40, 167, 69, 0.1);color:limegreen"
+    optionDiv[i-1].style="background-color:#f0f8ff"
+    optionLetter.style="background-color:rgba(40, 167, 69, 0.1);color:#4caf50"
 
     
     
@@ -342,21 +342,22 @@ let optionSelecting = (e)=>{
     console.log(correctOption);
     
     let optionDesign = e.target.innerHTML
-    // console.log(optionDesign,typeof(correctOption));
+    // console.log(optionDesign);
 
     // console.log(optionDiv[0]);// Answer Checking
     
     if(correctOption==optionDesign){
-        optionDiv[i-1].style="background-color:limegreen;color:white"
-
-        optionLetter.style="background-color:rgba(134, 205, 150, 0.63);color:white"
+        optionDiv[i-1].style="background-color:limegreen;color:#f0f8ff"
+        console.log(optionDiv[i-1]);
+        
+        optionLetter.style="background-color:rgba(134, 205, 150, 0.63);color:#f0f8ff"
         
         console.log("Winner");
         return
     }
     else{
-        optionDesign.style="background-color:red;color:white"
-        optionLetter.style="background-color:rgba(214, 146, 146, 0.63);color:white"
+        optionDesign.style="background-color:red;color:#f0f8ff"
+        optionLetter.style="background-color:rgba(214, 146, 146, 0.63);color:#f0f8ff"
     } 
     console.log(correctOption==optionDesign);
     
