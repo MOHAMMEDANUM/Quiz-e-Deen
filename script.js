@@ -103,6 +103,9 @@ let optionLetterB = document.querySelector("#option-letter-B")
 let optionLetterC = document.querySelector("#option-letter-C")
 let optionLetterD = document.querySelector("#option-letter-D")
 
+// 
+let optionLetter=document.querySelector(".option-letter")
+
 // Question counter selector
 
 let questionCounter=document.getElementById("question-counter")
@@ -123,6 +126,9 @@ let timerDisplay=document.getElementById("timer-display")
 
 // question full body section
 let questionSection=document.getElementById("question-section")
+
+// time-out-msg
+let timeOutMsg=document.getElementById("time-out-msg")
 
 
 
@@ -149,7 +155,7 @@ let easyModeQuestion = [
 
     {
         question : "What are the five pillars of Islam?",
-        options : ["Shahada, Zakat, Hajj, Sawm, Salat "," Zakat, Sawm, Salat, Hajj, Shahada","Salat, Sawm, Shahada, Zakat, Hajj","Hajj, Sawm, Zakat, Shahada, Salat "],
+        options : ["Shahada, Zakat, Hajj, Sawm, Salat","Zakat, Sawm, Salat, Hajj, Shahada","Salat, Sawm, Shahada, Zakat, Hajj","Hajj, Sawm, Zakat, Shahada, Salat "],
         answer : "Shahada, Zakat, Hajj, Sawm, Salat"
     },
 
@@ -218,12 +224,22 @@ optionLetterD.innerHTML =easyModeQuestion[0].options[3]
 let optionSelecting = (e)=>{
 
     let optionDesign = e.target.innerHTML
-    console.log(optionDesign);
+    // console.log(optionDesign,typeof(correctOption));
+
     // console.log(optionDiv[0]);// Answer Checking
-    if(String(correctOption)==String(optionDesign)){
-        optionDiv[0].style="background-color:red;color:white"  
-        console.log("Looser");
+    
+    if(correctOption==optionDesign){
+        optionDiv[0].style="background-color:limegreen;color:white"
+
+        optionLetter.style="background-color:rgba(134, 205, 150, 0.63);color:white"
+        
+        console.log("Winner");
+        return
     }
+    else{
+        optionDesign.style="background-color:red;color:white"
+        optionLetter.style="background-color:rgba(214, 146, 146, 0.63);color:white"
+    } 
     console.log(correctOption==optionDesign);
     
     
@@ -232,18 +248,23 @@ let optionSelecting = (e)=>{
 
 
     // timer display Inputing
-    let d=60;
-    let clock = ()=>{
-    timerDisplay.innerHTML=--d
-    if(d<=0){
-        questionSection.style="display:none;height:60vh"
-        d=0
-        timerDisplay.innerHTML=d
-        console.log("jahbkj");
-        return        
-    }
-    }
-    setInterval(clock,1000)
+
+    // let d=3;
+    // let clock = ()=>{
+    //     if(d>0){
+    //     timerDisplay.innerHTML=--d
+    //     }
+    //     if(d==0){
+    //         questionSection.style="display:none;"
+    //         d=0
+    //         timerDisplay.innerHTML=d
+    //         timeOutMsg.style="display:flex;background-color:red;color:white"
+    //         timeOutMsg.innerHTML="Time out"
+    //         console.log("jahbkj");
+
+    //     }
+    // }
+    // setInterval(clock,1000)
 
 
 // Next button function

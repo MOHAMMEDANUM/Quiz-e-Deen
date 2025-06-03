@@ -254,6 +254,16 @@ p{
 .question-section{
     display: block;
 }
+#time-out-msg{
+    display: none;
+    height: 60vh;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: xx-large;
+
+
+}
 
 .start-footer-easy-mode{
     display: flex;
@@ -396,7 +406,7 @@ p{
     margin: 0 10px;
 }
 
-.option-letter-A{
+.option-letter{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -410,7 +420,7 @@ p{
     border-radius: 50%;
 }
 
-.option-letter-B{
+.option-letter{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -423,7 +433,7 @@ p{
     background-color: rgba(40, 167, 69, 0.1);
     border-radius: 50%;
 }
-.option-letter-C{
+.option-letter{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -436,7 +446,7 @@ p{
     background-color: rgba(40, 167, 69, 0.1);
     border-radius: 50%;
 }
-.option-letter-D{
+.option-letter{
     display: flex;
     justify-content: center;
     align-items: center;
