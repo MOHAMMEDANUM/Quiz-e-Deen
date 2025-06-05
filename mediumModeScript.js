@@ -53,7 +53,7 @@ const mediumModeQuestions = [
         question : "who is your brother?",
         answer : [
             {text : "anum",  correct :false},
-            {text : "saad",  correct :false},
+            {text : "abrar",  correct :false},
             {text : "owaies",  correct :true},
             {text : "saud",  correct :false}
         ]
@@ -66,7 +66,7 @@ const mediumModeQuestions = [
             {text : "anum",  correct :false},
             {text : "saad",  correct :true},
             {text : "owaies",  correct :false},
-            {text : "saud",  correct :false}
+            {text : "kaif",  correct :false}
         ]
     }
 ]
@@ -89,7 +89,7 @@ let startGameMediumBtn=document.getElementById("start-game-medium-btn")
 
 // Showing the Question function
 let showQuestion = ()=>{
-    currentQuestion = 0
+    if(currentQuestion<=2){
     score = 0
     mediumQuestionText.innerText=mediumModeQuestions[currentQuestion].question
 
@@ -98,7 +98,38 @@ let showQuestion = ()=>{
         // console.log(options[i]);
         
     }
+}
     
 }
 startGameMediumBtn.addEventListener("click",showQuestion)
 
+// Next Game Medium Button
+
+let nextGameMediumBtn = document.getElementById("next-game-medium-btn")
+
+// Previous Game Medium Btn
+let previousGameMediumBtn=document.getElementById("previous-game-medium-btn")
+
+// Next Game Medium Button Function
+
+let next = ()=>{
+    if(currentQuestion>=1){
+        nextGameMediumBtn.style="display:none"
+        startGameMediumBtn.style="display:none"
+    }
+    currentQuestion++
+    console.log(currentQuestion);
+    showQuestion()
+    
+}
+
+// Previous Game Medium Btn
+let previous = ()=>{
+    if(currentQuestion<=1){
+        previousGameMediumBtn.style="display:none"
+        startGameMediumBtn.style="display:none"
+    }
+    currentQuestion--
+    console.log(currentQuestion);
+    showQuestion()
+}
