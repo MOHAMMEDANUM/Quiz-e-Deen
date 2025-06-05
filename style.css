@@ -240,8 +240,8 @@ p{
 .homebtneasy-mode:hover{
     background-color: white;
     color: darkcyan;
-    box-shadow: 0 4px 10px darkcyan;
-    border: darkcyan 3px solid;
+    padding: 4px 18px;
+    border: darkcyan 2px solid;
 }
 
 .mode-icon{
@@ -290,8 +290,8 @@ p{
 .startbtn-easy-mode:hover{
     background-color: white;
     color: darkcyan;
-    box-shadow: 0 4px 10px steelblue;
-    border: darkcyan 3px solid;
+    padding: 4px 38px;
+    border: darkcyan 2px solid;
     transform: translateY(-2px);
 
 }
