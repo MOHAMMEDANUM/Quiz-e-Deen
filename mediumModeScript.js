@@ -83,6 +83,11 @@ let mediumModeQuestionNumber=document.getElementById("medium-mode-question-numbe
 // Medium Mode Score Tag
 let scoreMediumMode=document.getElementById("score-medium-mode")
 
+// Question Counter Medium Mode
+let questionCounterMediumMode=document.getElementById("question-counter-medium-mode")
+
+// Progress Percentage Medium Mode
+let progressPercentageMediumMode=document.getElementById("progress-percentage-medium-mode")
 
 //  currentQuestion
 let currentQuestion = 0
@@ -100,8 +105,10 @@ let showQuestion = ()=>{
     
     if(currentQuestion<=2){
     score = 0
+
     mediumQuestionText.innerText=mediumModeQuestions[currentQuestion].question
-    mediumModeQuestionNumber.innerText=`Question ${currentQuestion+1}` 
+    mediumModeQuestionNumber.innerText=`Question ${currentQuestion+1}`
+    questionCounterMediumMode.innerText=`Question ${currentQuestion+1} of ${mediumModeQuestions.length}`
 
 
     for(let i=0;i<4;i++){
