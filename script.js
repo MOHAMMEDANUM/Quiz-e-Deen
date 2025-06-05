@@ -216,15 +216,15 @@ let correctOption = easyModeQuestion[0].answer
 
 // Question Inputing in easy mode
 
-questionText.innerHTML= easyModeQuestion[0].question
+// questionText.innerHTML= easyModeQuestion[0].question
 // console.log(questionText.innerHTML);
 
 // Question Options input
 
-optionLetterA.innerHTML =easyModeQuestion[0].options[0]
-optionLetterB.innerHTML =easyModeQuestion[0].options[1]
-optionLetterC.innerHTML =easyModeQuestion[0].options[2]
-optionLetterD.innerHTML =easyModeQuestion[0].options[3]
+// optionLetterA.innerHTML =easyModeQuestion[0].options[0]
+// optionLetterB.innerHTML =easyModeQuestion[0].options[1]
+// optionLetterC.innerHTML =easyModeQuestion[0].options[2]
+// optionLetterD.innerHTML =easyModeQuestion[0].options[3]
 
 // Option Selecting function
 
@@ -449,4 +449,35 @@ const mediumModeQuestions = [
 let mediumQuestionText=document.getElementById("medium-question-text")
 
 // Medium Mode Options Tag
-let options=document.getElementsByClassName("option")
+let options=document.getElementsByClassName("options-Medium-Mode")
+
+//  currentQuestion
+let currentQuestion = 0
+
+//  score
+let score = 0
+
+// start-game-medium-btn
+let startGameMediumBtn=document.getElementById("start-game-medium-btn")
+
+
+// Showing the Question function
+let showQuestion = ()=>{
+    currentQuestion = 0
+    score = 0
+    mediumQuestionText.innerText=mediumModeQuestions[currentQuestion].question
+
+    for(let i=0;i<4;i++){
+        options[i].innerHTML=mediumModeQuestions[currentQuestion].answer[i].text
+        // console.log(options[i]);
+        
+    }
+    
+}
+startGameMediumBtn.addEventListener("click",showQuestion)
+
+// Showing the Options function
+let ShowOptions = ()=>{
+
+}
+
