@@ -414,17 +414,39 @@ previousGameButton = document.getElementById("previous-game-btn")
 const mediumModeQuestions = [
 
     {
-        question : "who are you"
-        
+        question : "who are you?",
+        answer : [
+            {text : "anum",  correct :true},
+            {text : "saad",  correct :false},
+            {text : "owaies",  correct :false},
+            {text : "saud",  correct :false}
+        ]
+    },
+
+    {
+        question : "who is your brother?",
+        answer : [
+            {text : "anum",  correct :false},
+            {text : "saad",  correct :false},
+            {text : "owaies",  correct :true},
+            {text : "saud",  correct :false}
+        ]
 
     },
 
     {
-
-    },
-
-    {
-
+        question : "which brother is saudi return?",
+        answer : [
+            {text : "anum",  correct :false},
+            {text : "saad",  correct :true},
+            {text : "owaies",  correct :false},
+            {text : "saud",  correct :false}
+        ]
     }
-
 ]
+
+// Medium Mode Question Tag
+let mediumQuestionText=document.getElementById("medium-question-text")
+
+// Medium Mode Options Tag
+let options=document.getElementsByClassName("option")
