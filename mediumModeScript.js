@@ -77,6 +77,13 @@ let mediumQuestionText=document.getElementById("medium-question-text")
 // Medium Mode Options Tag
 let options=document.getElementsByClassName("options-Medium-Mode")
 
+// Medium Mode Question Number Tag
+let mediumModeQuestionNumber=document.getElementById("medium-mode-question-number")
+
+// Medium Mode Score Tag
+let scoreMediumMode=document.getElementById("score-medium-mode")
+
+
 //  currentQuestion
 let currentQuestion = 0
 
@@ -89,9 +96,13 @@ let startGameMediumBtn=document.getElementById("start-game-medium-btn")
 
 // Showing the Question function
 let showQuestion = ()=>{
+    console.log(currentQuestion);
+    
     if(currentQuestion<=2){
     score = 0
     mediumQuestionText.innerText=mediumModeQuestions[currentQuestion].question
+    mediumModeQuestionNumber.innerText=`Question ${currentQuestion+1}` 
+
 
     for(let i=0;i<4;i++){
         options[i].innerHTML=mediumModeQuestions[currentQuestion].answer[i].text
@@ -117,6 +128,10 @@ let next = ()=>{
         nextGameMediumBtn.style="display:none"
         startGameMediumBtn.style="display:none"
     }
+
+    mediumModeQuestionNumber.innerText=`Question ${currentQuestion+1}` 
+    previousGameMediumBtn.style="display:block"
+
     currentQuestion++
     console.log(currentQuestion);
     showQuestion()
@@ -129,6 +144,10 @@ let previous = ()=>{
         previousGameMediumBtn.style="display:none"
         startGameMediumBtn.style="display:none"
     }
+
+    mediumModeQuestionNumber.innerText=`Question ${currentQuestion}`
+    nextGameMediumBtn.style="display:block"
+    
     currentQuestion--
     console.log(currentQuestion);
     showQuestion()
