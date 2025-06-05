@@ -8,6 +8,8 @@
 // quiz start btn  declaration
 
 let quizStartBtn = document.getElementById("start-game-btn");
+let homeBtnMode=document.querySelector(".homebtn-mode")
+
 // console.log(quizStartBtn);
 
 
@@ -54,35 +56,40 @@ let quizstart = ()  => {
 
 let easyModeStart = () => {
 
-    easyMode[0].style="background-color: deepskyblue; color: white; border: 2px solid rgba(40, 167, 69, 0.1);";
+    easyMode[0].style="background-color: deepskyblue; color: white; border: 2px solid rgba(0, 0, 0, 0.67);padding:17px;height:180px ;width:220px";
     easyCount++;
 
     // hiding other modes
     mediumMode[0].style="display: none;";
     hardMode[0].style="display: none;";
+    homeBtnMode.style="display: block;"
 }
 
 //  medium mode function
 
 let mediumModeStart = () => {
-    mediumMode[0].style="background-color: deepskyblue; color: white; border: 2px solid rgba(40, 167, 69, 0.1);";
+    mediumMode[0].style="background-color: deepskyblue; color: white; border: 2px solid rgba(0, 0, 0, 0.67);padding:17px;height:180px ;width:220px";
     mediumCount++;
 
     // hiding other modes
     easyMode[0].style="display: none;";
     hardMode[0].style="display: none;";
+    homeBtnMode.style="display: block;"
+
 }
 
 // hard mode function
 
 let hardModeStart = () => {
-    hardMode[0].style="background-color: deepskyblue; color: white; border: 2px solid rgba(40, 167, 69, 0.1);";
+    hardMode[0].style="background-color: deepskyblue; color: white; border: 2px solid rgba(0, 0, 0, 0.67);padding:17px;height:180px ;width:220px";
     hardCount++;
 
 
     // hiding other modes
     easyMode[0].style="display: none;";
     mediumMode[0].style="display: none;";
+    homeBtnMode.style="display: block;"
+
 }
 
                     //          Home Page End

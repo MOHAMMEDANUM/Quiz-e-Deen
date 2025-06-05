@@ -163,14 +163,34 @@ p{
     border: darkcyan 2px solid;
 
 }
+.homebtn-mode{
+    display: none;
+    background-color:darkcyan;
+    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.1s ease, transform 0.1s ease;
+    margin: 20px auto;
+}
+.homebtn-mode:hover{
+    background-color: white;
+    text-decoration: none;
+
+    color: darkcyan;
+    padding: 13px 38px;
+    border: darkcyan 2px solid;
+}
+
 .start-footer{
     display: flex;
-    justify-content: center;
     align-items: center;
-
     background-color: deepskyblue;
     border-radius: 0 0 15px 15px;
-
 }
 
 
@@ -624,8 +644,9 @@ p{
 .homebtnhard-mode:hover{
     background-color: white;
     color: darkcyan;
-    box-shadow: 0 4px 10px darkcyan;
-    border: darkcyan 3px solid;
+    padding: 4px 18px;
+    border: darkcyan 2px solid;
+    
 }
 
 .mode-icon-hard-mode{
