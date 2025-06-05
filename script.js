@@ -375,7 +375,7 @@ let optionSelecting = (e)=>{
 
                             //                Medium Mode
 
-
+// Medium Mode Properties
     
 // Question counter selector
 
@@ -408,3 +408,23 @@ nextGameButton = document.getElementById("next-game-btn")
 
 // Previous Question Button
 previousGameButton = document.getElementById("previous-game-btn")
+
+
+
+const mediumModeQuestions = [
+
+    {
+        question : "who are you"
+        
+
+    },
+
+    {
+
+    },
+
+    {
+
+    }
+
+]
