@@ -109,6 +109,8 @@ let showQuestion = ()=>{
     mediumQuestionText.innerText=mediumModeQuestions[currentQuestion].question
     mediumModeQuestionNumber.innerText=`Question ${currentQuestion+1}`
     questionCounterMediumMode.innerText=`Question ${currentQuestion+1} of ${mediumModeQuestions.length}`
+    let percentage=Math.floor(((currentQuestion+1)/(mediumModeQuestions.length))*100)
+    progressPercentageMediumMode.innerText=percentage+"% Complete"
 
 
     for(let i=0;i<4;i++){
