@@ -159,9 +159,8 @@ p{
 .startbtn:hover{
     background-color: white;
     color: darkcyan;
-    box-shadow: 0 4px 10px darkcyan;
-    border: darkcyan 3px solid;
-    transform: translateY(-2px);
+    padding: 13px 38px;
+    border: darkcyan 2px solid;
 
 }
 .start-footer{
@@ -499,8 +498,8 @@ p{
 .homebtnmedium-mode:hover{
     background-color: white;
     color: darkcyan;
-    box-shadow: 0 4px 10px darkcyan;
-    border: darkcyan 3px solid;
+    padding: 4px 18px;
+    border: darkcyan 2px solid;
 
 }
 
