@@ -102,7 +102,7 @@ let hardModeStart = () => {
 
 // question selector
 
-let questionText =  document.querySelector(".question-text")
+let questionText =  document.getElementById("easy-question-text")
 
 // Options selectors
 let optionLetterA = document.querySelector("#option-letter-A")
@@ -258,7 +258,7 @@ let i = 1
 let nextBtn = ()=>{
 
     // nextBtn increment
-    optionDiv[i-1].style="background-color:#f0f8ff"
+    // optionDiv[i-1].style="background-color:#f0f8ff"
     optionLetter.style="background-color:rgba(40, 167, 69, 0.1);color:#4caf50"
 
     
@@ -373,3 +373,38 @@ let optionSelecting = (e)=>{
 }
 
 
+                            //                Medium Mode
+
+
+    
+// Question counter selector
+
+questionCounter=document.getElementById("question-counter")
+
+// Question Number selector
+
+questionNumber=document.getElementById("ques-no")
+
+// Progress percentage selector
+progressPercentage=document.getElementById("progress-percentage")
+
+// progress fill selector
+progressFill=document.getElementById("progress-fill")
+
+// timer display selector
+timerDisplay=document.getElementById("timer-display")
+
+
+// question full body section
+questionSection=document.getElementById("question-section")
+
+// time-out-msg
+timeOutMsg=document.getElementById("time-out-msg")
+
+
+
+// Next Question Button
+nextGameButton = document.getElementById("next-game-btn")
+
+// Previous Question Button
+previousGameButton = document.getElementById("previous-game-btn")
