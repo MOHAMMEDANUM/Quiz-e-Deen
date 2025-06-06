@@ -481,7 +481,7 @@ p{
 
 
 
-/* Medium Mode section */
+                    /* Medium Mode section */
 
 .quiz-card-medium-mode{
     border: 2px solid white;
@@ -606,6 +606,30 @@ p{
     background-color: rgba(40, 167, 69, 0.1);
     border-radius: 50%;
 }
+
+#previous-game-medium-btn{
+    display: none;
+    background-color:steelblue;
+    color: white;
+    border: none;
+    padding: 6px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 20px auto;
+}
+
+#previous-game-medium-btn:hover{
+    background-color: white;
+    color: darkcyan;
+    box-shadow: 0 4px 10px steelblue;
+    border: darkcyan 3px solid;
+    transform: translateY(-2px);
+}
+
+
 
 
 /* Hard Mode section */
