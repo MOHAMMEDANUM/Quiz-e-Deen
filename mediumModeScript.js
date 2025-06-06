@@ -83,11 +83,14 @@ let mediumModeQuestionNumber=document.getElementById("medium-mode-question-numbe
 // Medium Mode Score Tag
 let scoreMediumMode=document.getElementById("score-medium-mode")
 
-// Question Counter Medium Mode
+// Question Counter Tag
 let questionCounterMediumMode=document.getElementById("question-counter-medium-mode")
 
-// Progress Percentage Medium Mode
+// Progress Percentage Tag
 let progressPercentageMediumMode=document.getElementById("progress-percentage-medium-mode")
+
+// Progress Fill Tag
+let progressFillMediumMode = document.getElementById("progress-fill-medium-mode")
 
 //  currentQuestion
 let currentQuestion = 0
@@ -99,7 +102,10 @@ let score = 0
 let startGameMediumBtn=document.getElementById("start-game-medium-btn")
 
 
+
+
 // Showing the Question function
+
 let showQuestion = ()=>{
     console.log(currentQuestion);
     
@@ -111,6 +117,7 @@ let showQuestion = ()=>{
     questionCounterMediumMode.innerText=`Question ${currentQuestion+1} of ${mediumModeQuestions.length}`
     let percentage=Math.floor(((currentQuestion+1)/(mediumModeQuestions.length))*100)
     progressPercentageMediumMode.innerText=percentage+"% Complete"
+    progressFillMediumMode.style="width:"+percentage+"%"
 
 
     for(let i=0;i<4;i++){
