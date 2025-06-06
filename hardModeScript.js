@@ -111,3 +111,10 @@ let progressFillhardMode = document.getElementById("progress-fill-hard-mode")
 // Option Selecting Tag
 let optionSelecting=document.getElementById("option-Selecting")
 // console.log(optionSelecting.lastElementChild.innerHTML);
+
+
+//  currentQuestion
+let currentQuestion = 0
+
+//  score
+let score = 0
