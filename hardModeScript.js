@@ -83,3 +83,31 @@ const hardModeQuestions = [
         ]
     }
 ]
+
+
+
+// hard Mode Question Tag
+let hardQuestionText=document.getElementById("hard-question-text")
+
+// hard Mode Options Tag
+let options=document.getElementsByClassName("options-hard-Mode")
+
+// hard Mode Question Number Tag
+let hardModeQuestionNumber=document.getElementById("hard-mode-question-number")
+
+// hard Mode Score Tag
+let scorehardMode=document.getElementById("score-hard-mode")
+
+// Question Counter Tag
+let questionCounterhardMode=document.getElementById("question-counter-hard-mode")
+
+// Progress Percentage Tag
+let progressPercentagehardMode=document.getElementById("progress-percentage-hard-mode")
+
+// Progress Fill Tag
+let progressFillhardMode = document.getElementById("progress-fill-hard-mode")
+
+
+// Option Selecting Tag
+let optionSelecting=document.getElementById("option-Selecting")
+// console.log(optionSelecting.lastElementChild.innerHTML);
