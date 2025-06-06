@@ -36,16 +36,15 @@ nextGameButton = document.getElementById("next-game-btn")
 previousGameButton = document.getElementById("previous-game-btn")
 
 
-
 const mediumModeQuestions = [
 
     {
         question : "who are you?",
         answer : [
             {text : "anum",  correct :true},
-            {text : "saad",  correct :false},
-            {text : "owaies",  correct :false},
-            {text : "saud",  correct :false}
+            {text : "saad",  notcorrect :false},
+            {text : "owaies", notcorrect :false},
+            {text : "saud",  notcorrect :false}
         ]
     },
 
@@ -68,8 +67,19 @@ const mediumModeQuestions = [
             {text : "owaies",  correct :false},
             {text : "kaif",  correct :false}
         ]
+    },
+
+    {
+        question : "what?",
+        answer : [
+            {text : "anum",  correct :false},
+            {text : "saad",  correct :true},
+            {text : "owaies",  correct :false},
+            {text : "kaif",  correct :false}
+        ]
     }
 ]
+
 
 // Medium Mode Question Tag
 let mediumQuestionText=document.getElementById("medium-question-text")
@@ -92,6 +102,17 @@ let progressPercentageMediumMode=document.getElementById("progress-percentage-me
 // Progress Fill Tag
 let progressFillMediumMode = document.getElementById("progress-fill-medium-mode")
 
+
+// Option Selecting Tag
+let optionSelecting=document.getElementById("option-Selecting")
+// console.log(optionSelecting.lastElementChild.innerHTML);
+
+
+
+
+
+
+
 //  currentQuestion
 let currentQuestion = 0
 
@@ -101,13 +122,23 @@ let score = 0
 // start-game-medium-btn
 let startGameMediumBtn=document.getElementById("start-game-medium-btn")
 
+        let clickedOptionE=null
+        let optionClicking=(e)=>{
+            // console.log(e.target.lastElementChild.innerText);
+            clickedOptionE=e.target.lastElementChild.innerText
+            console.log(e.target.lastElementChild.innerText);
+        }
+        console.log(clickedOptionE);
+        
+        
+
 
 
 
 // Showing the Question function
 
 let showQuestion = ()=>{
-    console.log(currentQuestion);
+    // console.log(currentQuestion);
     
     if(currentQuestion<=2){
     score = 0
@@ -122,8 +153,25 @@ let showQuestion = ()=>{
 
     for(let i=0;i<4;i++){
         options[i].innerHTML=mediumModeQuestions[currentQuestion].answer[i].text
-        // console.log(options[i]);
+
+        // console.log(mediumModeQuestions[currentQuestion].answer[i].correct==true);
         
+        if(mediumModeQuestions[currentQuestion].answer[i].correct===true){
+            // console.log(mediumModeQuestions[currentQuestion].answer[i].text);
+            // console.log(clickedOptionE);
+                if(clickedOptionE==mediumModeQuestions[currentQuestion].answer[i].text){
+
+                console.log("winner");
+            }
+
+            }
+        
+
+
+
+
+
+
     }
 }
     
@@ -168,3 +216,5 @@ let previous = ()=>{
     console.log(currentQuestion);
     showQuestion()
 }
+
+
