@@ -125,11 +125,14 @@ let startGamehardBtn=document.getElementById("start-game-hard-btn")
 
         let clickedOptionE=null
         let optionClicking=(e)=>{
+            
             // console.log(e.target.lastElementChild.innerText);
+
             clickedOptionE=e.target.lastElementChild.innerText
             console.log(e.target.lastElementChild.innerText);
         }
         console.log(clickedOptionE);
+
 
 
 
