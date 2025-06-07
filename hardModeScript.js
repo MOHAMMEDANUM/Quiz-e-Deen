@@ -133,29 +133,45 @@ let score = 0
 
 
 
-// Next Game Medium Button
+// Next Game hard Button
 
-let nextGameMediumBtn = document.getElementById("next-game-medium-btn")
+let nextGamehardBtn = document.getElementById("next-game-hard-btn")
 
-// Previous Game Medium Btn
-let previousGameMediumBtn=document.getElementById("previous-game-medium-btn")
-
-
+// Previous Game hard Btn
+let previousGamehardBtn=document.getElementById("previous-game-hard-btn")
 
 
-// Next Game Medium Button Function
+
+
+// Next Game hard Button Function
 
 let next = ()=>{
     if(currentQuestion>=1){
-        nextGameMediumBtn.style="display:none"
-        startGameMediumBtn.style="display:none"
+        nextGamehardBtn.style="display:none"
+        startGamehardBtn.style="display:none"
     }
 
-    mediumModeQuestionNumber.innerText=`Question ${currentQuestion+1}` 
-    previousGameMediumBtn.style="display:block"
+    hardModeQuestionNumber.innerText=`Question ${currentQuestion+1}` 
+    previousGamehardBtn.style="display:block"
 
     currentQuestion++
     console.log(currentQuestion);
     showQuestion()
     
+}
+
+
+// Previous Game hard Btn
+let previous = ()=>{
+    if(currentQuestion<=1){
+        previousGamehardBtn.style="display:none"
+        startGamehardBtn.style="display:none"
+    }
+
+    hardModeQuestionNumber.innerText=`Question ${currentQuestion}`
+    nextGamehardBtn.style="display:block"
+    
+    currentQuestion--
+    console.log(currentQuestion);
+    showQuestion()
 }
