@@ -120,6 +120,17 @@ let currentQuestion = 0
 let score = 0
 
 
+// start-game-hard-btn
+let startGamehardBtn=document.getElementById("start-game-hard-btn")
+
+        let clickedOptionE=null
+        let optionClicking=(e)=>{
+            // console.log(e.target.lastElementChild.innerText);
+            clickedOptionE=e.target.lastElementChild.innerText
+            console.log(e.target.lastElementChild.innerText);
+        }
+        console.log(clickedOptionE);
+
 
 
 
