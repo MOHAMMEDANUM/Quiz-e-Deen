@@ -118,3 +118,24 @@ let currentQuestion = 0
 
 //  score
 let score = 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Next Game Medium Button
+
+let nextGameMediumBtn = document.getElementById("next-game-medium-btn")
+
+// Previous Game Medium Btn
+let previousGameMediumBtn=document.getElementById("previous-game-medium-btn")
