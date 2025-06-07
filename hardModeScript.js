@@ -139,3 +139,23 @@ let nextGameMediumBtn = document.getElementById("next-game-medium-btn")
 
 // Previous Game Medium Btn
 let previousGameMediumBtn=document.getElementById("previous-game-medium-btn")
+
+
+
+
+// Next Game Medium Button Function
+
+let next = ()=>{
+    if(currentQuestion>=1){
+        nextGameMediumBtn.style="display:none"
+        startGameMediumBtn.style="display:none"
+    }
+
+    mediumModeQuestionNumber.innerText=`Question ${currentQuestion+1}` 
+    previousGameMediumBtn.style="display:block"
+
+    currentQuestion++
+    console.log(currentQuestion);
+    showQuestion()
+    
+}
