@@ -158,7 +158,6 @@ let easyModeQuestion = [
                    ]
     },
     {
-
         question : " Which of the following is the first pillar of Islam?",
         answers  : [
                     {text :"Zakat" , correctOption :false},
@@ -177,7 +176,6 @@ let easyModeQuestion = [
                   ]
     },
     {
-
         question : " Which of the following is a term for the obligatory prayers in Islam?",
         answers : [
                     {text :"Zakat" , correctOption :false},
@@ -188,28 +186,7 @@ let easyModeQuestion = [
     }
 ]
 
-// Answer declare
-
-let correctOption = easyModeQuestion[0].answer
-// console.log(correctOption);
-
-
-// Question Inputing in easy mode
-
-// questionText.innerHTML= easyModeQuestion[0].question
-// console.log(questionText.innerHTML);
-
-// Question Options input
-
-// optionLetterA.innerHTML =easyModeQuestion[0].options[0]
-// optionLetterB.innerHTML =easyModeQuestion[0].options[1]
-// optionLetterC.innerHTML =easyModeQuestion[0].options[2]
-// optionLetterD.innerHTML =easyModeQuestion[0].options[3]
-
 // Option Selecting function
-
-
-
 
     // timer display Inputing
 
@@ -231,123 +208,45 @@ let correctOption = easyModeQuestion[0].answer
     // setInterval(clock,1000)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
 // Next button function
 
+// Next Game easy Button
 
-let i = 1
-let nextBtn = ()=>{
+let nextGameeasyBtn = document.getElementById("next-game-easy-btn")
 
-    // nextBtn increment
-    // optionDiv[i-1].style="background-color:#f0f8ff"
-    optionLetter.style="background-color:rgba(40, 167, 69, 0.1);color:#4caf50"
+// Previous Game easy Btn
+let previousGameeasyBtn=document.getElementById("previous-game-easy-btn")
 
-    
-    
-    if(i<=easyModeQuestion.length-1){
-    
 
-    questionText.innerHTML= easyModeQuestion[i].question
-    console.log(questionText.innerHTML);
-    
-    optionLetterA.innerHTML =easyModeQuestion[i].options[0]
-    optionLetterB.innerHTML =easyModeQuestion[i].options[1]
-    optionLetterC.innerHTML =easyModeQuestion[i].options[2]
-    optionLetterD.innerHTML =easyModeQuestion[i].options[3]
+// Next Game easy Button Function
 
-    i++
-    previousGameButton.style="display:block"
-
-    // Question Number Inputing
-    questionNumber.innerHTML=`Question ${i}`
-    questionCounter.innerHTML=`Question ${i} of ${easyModeQuestion.length}`
-
-    // Progress Percentage Inputing
-    progressPercentage.innerHTML=Math.floor(((`${i}`/`${easyModeQuestion.length}`)*100))+"% Complete"
-
-    // progress fill Inputing
-    progressFill.style="width:"+Math.floor(((`${i}`/`${easyModeQuestion.length}`)*100))+"%"
-
-    
+let next = ()=>{
+    if(currentQuestion>=1){
+        nextGameeasyBtn.style="display:none"
+        startGameeasyBtn.style="display:none"
     }
 
-    // disable nextbtn for last
+    easyModeQuestionNumber.innerText=`Question ${currentQuestion+1}` 
+    previousGameeasyBtn.style="display:block"
 
-    if(i>easyModeQuestion.length-1){
-            nextGameButton.style="display:none"
-            i=easyModeQuestion.length-1
-            console.log(i);
-            return
-    }
+    currentQuestion++
+    console.log(currentQuestion);
+    showQuestion()   
 }
-nextGameButton.addEventListener("click",nextBtn)
 
-
-
-
-// Previous Btn function
-
-let previousBtn = ()=>{
-
-    if(i<1){
-            previousGameButton.style="display:none"
-            // i=0
-            console.log(i);
-            return
-        }
-        nextGameButton.style="display:block"
-
-    if(i>0){
-    
-    i--
-
-    // Question Number Inputing
-    questionNumber.innerHTML=`Question ${i+1}`
-    questionCounter.innerHTML=`Question ${i+1} of ${easyModeQuestion.length}`
-
-    // Progress Percentage Inputing
-    progressPercentage.innerHTML=Math.floor(((`${i+1}`/`${easyModeQuestion.length}`)*100))+"% Complete"
-
-    // progress fill Inputing
-    progressFill.style="width:"+Math.floor(((`${i+1}`/`${easyModeQuestion.length}`)*100))+"%"
-
-    questionText.innerHTML= easyModeQuestion[i].question
-
-    optionLetterA.innerHTML =easyModeQuestion[i].options[0]
-    optionLetterB.innerHTML =easyModeQuestion[i].options[1]
-    optionLetterC.innerHTML =easyModeQuestion[i].options[2]
-    optionLetterD.innerHTML =easyModeQuestion[i].options[3]
-    previousGameButton.style="display:block"
-
-    }
-}
-previousGameButton.addEventListener("click",previousBtn)
-
-let optionSelecting = (e)=>{
-
-    console.log(i);
-    correctOption = easyModeQuestion[i-1].answer
-    console.log(correctOption);
-    
-    let optionDesign = e.target.innerHTML
-    // console.log(optionDesign);
-
-    // console.log(optionDiv[0]);// Answer Checking
-    
-    if(correctOption==optionDesign){
-        optionDiv[i-1].style="background-color:limegreen;color:#f0f8ff"
-        console.log(optionDiv[i-1]);
-        
-        optionLetter.style="background-color:rgba(134, 205, 150, 0.63);color:#f0f8ff"
-        
-        console.log("Winner");
-        return
-    }
-    else{
-        optionDesign.style="background-color:red;color:#f0f8ff"
-        optionLetter.style="background-color:rgba(214, 146, 146, 0.63);color:#f0f8ff"
-    } 
-    console.log(correctOption==optionDesign);
-    
-    
-    // optionDiv[0].style="background-color:limegreen;color:white" 
-}
