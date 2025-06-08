@@ -7,6 +7,9 @@
 let questionText =  document.getElementById("easy-question-text")
 
 // Options selectors
+let options = document.getElementsByClassName("option-letter")
+
+// Separate option selectors
 let optionLetterA = document.querySelector("#option-letter-A")
 let optionLetterB = document.querySelector("#option-letter-B")
 let optionLetterC = document.querySelector("#option-letter-C")
@@ -48,11 +51,11 @@ let previousGameButton = document.getElementById("previous-game-btn")
 
 //  Question of easy mode
 
-let easyModeQuestion = [
+let easyModeQuestions = [
 
     {
         question : "What are the five pillars of Islam?",
-        answers  : [
+        answer  : [
                     {text :"Shahada, Zakat, Hajj, Sawm, Salat",         correctOption : true},
                     {text :"Zakat, Sawm, Salat, Hajj, Shahada",         correctOption : false},
                     {text :"Salat, Sawm, Shahada, Zakat, Hajj",         correctOption : false},
@@ -61,34 +64,34 @@ let easyModeQuestion = [
     },
     {
         question : " Which of the following is the first pillar of Islam?",
-        answers  : [
-                    {text :"Zakat" , correctOption :false},
-                    {text : "Hajj", correctOption :false},
-                    {text : "Shahada" , correctOption : true},
-                    {text :"Salat" , correctOption :false}
+        answer  : [
+                    {text :"Zakat" , correct :false},
+                    {text : "Hajj", correct :false},
+                    {text : "Shahada" , correct : true},
+                    {text :"Salat" , correct :false}
                    ]
     },
     {
         question : " What does the term Shahada refer to?",
-        answers : [
-                    {text :"Almsgiving" , correctOption :false},
-                    {text :"Fasting" , correctOption :false},
-                    {text :"Pilgrimage" , correctOption :false},
-                    {text :"Declaration of Faith" , correctOption :true}
+        answer : [
+                    {text :"Almsgiving" , correct :false},
+                    {text :"Fasting" , correct :false},
+                    {text :"Pilgrimage" , correct :false},
+                    {text :"Declaration of Faith" , correct :true}
                   ]
     },
     {
         question : " Which of the following is a term for the obligatory prayers in Islam?",
-        answers : [
-                    {text :"Zakat" , correctOption :false},
-                    {text :"Sawm" , correctOption :false},
-                    {text :"Salat" , correctOption :true},
-                    {text :"Hajj" , correctOption :false}
+        answer : [
+                    {text :"Zakat" , correct :false},
+                    {text :"Sawm" , correct :false},
+                    {text :"Salat" , correct :true},
+                    {text :"Hajj" , correct :false}
                   ]
     }
 ]
 
-// Option Selecting function
+
 
     // timer display Inputing
 
@@ -112,30 +115,27 @@ let easyModeQuestion = [
 
     
 // easy Mode Question Tag
-let hardQuestionText=document.getElementById("hard-question-text")
+let easyQuestionText=document.getElementById("easy-question-text")
 
-// hard Mode Options Tag
-let options=document.getElementsByClassName("options-hard-Mode")
+// easy Mode Question Number Tag
+let easyModeQuestionNumber=document.getElementById("easy-mode-question-number")
 
-// hard Mode Question Number Tag
-let hardModeQuestionNumber=document.getElementById("hard-mode-question-number")
-
-// hard Mode Score Tag
-let scorehardMode=document.getElementById("score-hard-mode")
+// easy Mode Score Tag
+let scoreeasyMode=document.getElementById("score-easy-mode")
 
 // Question Counter Tag
-let questionCounterhardMode=document.getElementById("question-counter-hard-mode")
+let questionCountereasyMode=document.getElementById("question-counter-easy-mode")
 
 // Progress Percentage Tag
-let progressPercentagehardMode=document.getElementById("progress-percentage-hard-mode")
+let progressPercentageeasyMode=document.getElementById("progress-percentage-easy-mode")
 
 // Progress Fill Tag
-let progressFillhardMode = document.getElementById("progress-fill-hard-mode")
-
+let progressFilleasyMode = document.getElementById("progress-fill-easy-mode")
 
 // Option Selecting Tag
-let optionSelecting=document.getElementById("option-Selecting")
+let optionSelecting=document.getElementsByClassName("option-letter")
 // console.log(optionSelecting.lastElementChild.innerHTML);
+
 
 
 //  currentQuestion
@@ -144,19 +144,65 @@ let currentQuestion = 0
 //  score
 let score = 0
 
+// start-game-hard-btn
+let startGameeasyBtn=document.getElementById("start-game-easy-btn")
+
+// Showing the Question function
+
+let showQuestion = ()=>{
+    console.log(currentQuestion);
+    
+    if(currentQuestion<=currentQuestion){
+    score = 0
+
+    easyQuestionText.innerText=easyModeQuestions[currentQuestion].question
+    console.log(easyQuestionText.innerText);
+    
+    easyModeQuestionNumber.innerText=`Question ${currentQuestion+1}`
+    console.log(easyModeQuestionNumber.innerText);
+
+    questionCountereasyMode.innerText=`Question ${currentQuestion+1} of ${easyModeQuestions.length}`
+    console.log(questionCountereasyMode.innerText);
+    
+    let percentage=Math.floor(((currentQuestion+1)/(easyModeQuestions.length))*100)
+    progressPercentageeasyMode.innerText=percentage+"% Complete"
+    console.log(progressPercentageeasyMode.innerText);
+
+    progressFilleasyMode.style="width:"+percentage+"%"
+    
 
 
+    for(let i=0;i<4;i++){
+        options[i].innerHTML=easyModeQuestions[currentQuestion].answer[i].text
+
+        // console.log(easyModeQuestions[currentQuestion].answer[i].correct==true);
+        
+        // if(easyModeQuestions[currentQuestion].answer[i].correct===true){
+        //     // console.log(easyModeQuestions[currentQuestion].answer[i].text);
+        //     // console.log(clickedOptionE);
+        //         if(clickedOptionE==easyModeQuestions[currentQuestion].answer[i].text){
+
+        //         console.log("winner");
+        //     }
+
+        //     }
+        
+    }
+}
+    
+}
+startGameeasyBtn.addEventListener("click",showQuestion)
 
 
+// // Option Selecting Function
 
-
-
-
-
-
-
-
-
+// let clickedOptionE=""
+// let optionClicking=(e)=>{
+            
+//             clickedOptionE=e.target.innerText
+//             // console.log(clickedOptionE);
+// }
+// console.log(clickedOptionE);
 
 
 
@@ -172,9 +218,10 @@ let previousGameeasyBtn=document.getElementById("previous-game-easy-btn")
 
 
 // Next Game easy Button Function
+console.log(easyModeQuestions);
 
 let next = ()=>{
-    if(currentQuestion>=1){
+    if(currentQuestion>=easyModeQuestions.length-2){
         nextGameeasyBtn.style="display:none"
         startGameeasyBtn.style="display:none"
     }
@@ -184,5 +231,20 @@ let next = ()=>{
 
     currentQuestion++
     console.log(currentQuestion);
-    showQuestion()   
+    showQuestion()  
+}
+
+// Previous Game hard Btn
+let previous = ()=>{
+    if(currentQuestion<=1){
+        previousGameeasyBtn.style="display:none"
+        startGameeasyBtn.style="display:none"
+    }
+
+    easyModeQuestionNumber.innerText=`Question ${currentQuestion}`
+    nextGameeasyBtn.style="display:block"
+    
+    currentQuestion--
+    console.log(currentQuestion);
+    showQuestion()
 }

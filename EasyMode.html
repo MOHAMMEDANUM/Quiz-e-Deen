@@ -39,11 +39,11 @@
 
             <div class="progress-section">
                 <div class="progress-header">
-                    <div class="question-counter" id="question-counter">Question 1 of 6</div>
-                    <div class="progress-percentage" id="progress-percentage">16% Complete</div>
+                    <div class="question-counter" id="question-counter-easy-mode">Question 1 of 4</div>
+                    <div class="progress-percentage" id="progress-percentage-easy-mode">25% Complete</div>
                 </div>
                 <div class="progress-bar">
-                    <div class="progress-fill" id="progress-fill"></div>
+                    <div class="progress-fill" id="progress-fill-easy-mode"></div>
                 </div>
                 <hr>
             </div>
@@ -57,7 +57,7 @@
                     <div class="question-inner-header">
                         <div class="question-number">
                         <span class="question-icon">❓</span>
-                        <span id="ques-no">Question 1</span>
+                        <span id="easy-mode-question-number">Question 1</span>
                     </div>
                     <div id="score-easy-mode"><span >Score : </span></div>
                     </div>
@@ -67,14 +67,25 @@
                 <!-- Options container -->
 
                 <div class="options-container">
+                        <div class="options-inner-container">
+                            <span id="option-letter">A</span>
+                            <span  class="option-letter" onclick="optionClicking(event)">Shahada, Zakat, Hajj, Sawm, Salat</span>
+                        </div>
 
-                        <span id="option-letter-A" class="option-letter" onclick="optionSelecting(event)">A Shahada, Zakat, Hajj, Sawm, Salat</span>
+                        <div class="options-inner-container">
+                            <span id="option-letter">B</span>
+                            <span  class="option-letter" onclick="optionClicking(event)">Zakat, Sawm, Salat, Hajj, Shahada</span>
+                        </div>
 
-                        <span id="option-letter-B" class="option-letter" onclick="optionSelecting(event)">B Zakat, Sawm, Salat, Hajj, Shahada</span>
+                        <div class="options-inner-container">
+                            <span id="option-letter">C</span>
+                            <span id="option-letter-C" class="option-letter" onclick="optionClicking(event)">Salat, Sawm, Shahada, Zakat, Hajj</span>
+                        </div>
 
-                        <span id="option-letter-C" class="option-letter" onclick="optionSelecting(event)">C Salat, Sawm, Shahada, Zakat, Hajj</span>
-
-                        <span id="option-letter-D" class="option-letter" onclick="optionSelecting(event)">D Hajj, Sawm, Zakat, Shahada, Salat</span>
+                        <div class="options-inner-container">
+                            <span id="option-letter">D</span>
+                            <span id="option-letter-D" class="option-letter" onclick="optionClicking(event)">Hajj, Sawm, Zakat, Shahada, Salat</span>
+                        </div>
 
                 </div>
             </div>
@@ -82,13 +93,16 @@
                     <!-- Footer section that includes previous, Giveup and Next btns -->
 
             <div class="start-footer-easy-mode">
-                    <button class="startbtn-easy-mode" id="previous-game-btn">
+                    <button class="startbtn-easy-mode" id="previous-game-easy-btn" onclick="previous()">
                         <span>← Previous</span>   
+                    </button>
+                    <button class="startbtn-easy-mode" id="start-game-easy-btn" >
+                        <span >Start</span>
                     </button>
                     <button class="startbtn-easy-mode" id="give-up-game-btn">
                         <span>Give Up</span>
                     </button>
-                    <button class="startbtn-easy-mode" id="next-game-btn">
+                    <button class="startbtn-easy-mode" id="next-game-easy-btn" onclick="next()">
                         <span >Next →</span>
                     </button>
                 </div>
@@ -101,6 +115,7 @@
 
 
 
-    <script src="./script.js"></script>
+    <!-- <script src="./script.js"></script> -->
+    <script src="easyModeScript.js"></script>
 </body>
 </html>
