@@ -147,56 +147,45 @@ let previousGameButton = document.getElementById("previous-game-btn")
 //  Question of easy mode
 
 let easyModeQuestion = [
-,"Zakat, Sawm, Salat, Hajj, Shahada","Salat, Sawm, Shahada, Zakat, Hajj","Hajj, Sawm, Zakat, Shahada, Salat"
+
     {
         question : "What are the five pillars of Islam?",
-        answers : [
-                    {text :"Shahada, Zakat, Hajj, Sawm, Salat"},{correctOption : }
-
-                  ],
-        answer : "Shahada, Zakat, Hajj, Sawm, Salat"
+        answers  : [
+                    {text :"Shahada, Zakat, Hajj, Sawm, Salat",         correctOption : true},
+                    {text :"Zakat, Sawm, Salat, Hajj, Shahada",         correctOption : false},
+                    {text :"Salat, Sawm, Shahada, Zakat, Hajj",         correctOption : false},
+                    {text :"Hajj, Sawm, Zakat, Shahada, Salat",         correctOption : false}
+                   ]
     },
-
     {
 
         question : " Which of the following is the first pillar of Islam?",
-        options : ["Shahada","Zakat","Hajj","Salat"],
-        answer : "Shahada"
-
+        answers  : [
+                    {text :"Zakat" , correctOption :false},
+                    {text : "Hajj", correctOption :false},
+                    {text : "Shahada" , correctOption : true},
+                    {text :"Salat" , correctOption :false}
+                   ]
     },
-
     {
-
         question : " What does the term Shahada refer to?",
-        options : ["Almsgiving","Fasting","Pilgrimage","Declaration of Faith"],
-        answer : "Declaration of Faith"
-
+        answers : [
+                    {text :"Almsgiving" , correctOption :false},
+                    {text :"Fasting" , correctOption :false},
+                    {text :"Pilgrimage" , correctOption :false},
+                    {text :"Declaration of Faith" , correctOption :true}
+                  ]
     },
-
     {
 
         question : " Which of the following is a term for the obligatory prayers in Islam?",
-        options : ["Zakat ","Sawm","Salat","Hajj"],
-        answer : "Salat"
-
-    },
-
-    {
-
-        question : " who?",
-        options : ["Zakat ","Sawm","Salat","Hajj"],
-        answer : "Salat"
-
-    },
-
-    {
-
-        question : " how?",
-        options : ["Zakat ","Sawm","Salat","Hajj"],
-        answer : "Salat"
-
+        answers : [
+                    {text :"Zakat" , correctOption :false},
+                    {text :"Sawm" , correctOption :false},
+                    {text :"Salat" , correctOption :true},
+                    {text :"Hajj" , correctOption :false}
+                  ]
     }
-
 ]
 
 // Answer declare
